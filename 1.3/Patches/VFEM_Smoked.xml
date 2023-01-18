@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Factions Expanded - Medieval</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationAdd">
+          <success>Always</success>
+          <xpath>/Defs</xpath>
+          <value>
+            <ThingDef ParentName="RBB_ResourceBase">
+              <defName>RF_SmokedFishMeat</defName>
+              <label>smoked seafood</label>
+              <description>A piece of fish meat preserved by smoking. Tastes good. It lasts a long time without refrigeration. Great for traveling.</description>
+              <graphicData>
+                <texPath>Things/Meals/SmokedFishMeat</texPath>
+                <graphicClass>Graphic_StackCount</graphicClass>
+              </graphicData>
+              <statBases>
+                <Mass>0.01</Mass>
+                <MaxHitPoints>60</MaxHitPoints>
+                <Nutrition>0.05</Nutrition>
+                <MarketValue>1.6</MarketValue>
+              </statBases>
+              <ingestible>
+                <foodType>Meat</foodType>
+                <preferability>MealSimple</preferability>
+                <ingestEffect>EatVegetarian</ingestEffect>
+                <ingestSound>Meal_Eat</ingestSound>
+                <optimalityOffsetHumanlikes>6</optimalityOffsetHumanlikes>
+              </ingestible>
+              <uiIconForStackCount>1</uiIconForStackCount>
+              <comps>
+                <li Class="CompProperties_Rottable">
+                  <daysToRotStart>16</daysToRotStart>
+                  <rotDestroys>True</rotDestroys>
+                </li>
+                <li Class="CompProperties_Ingredients" />
+                <li Class="CompProperties_FoodPoisonable" />
+              </comps>
+              <thingCategories>
+                <li>RF_RawSeafood</li>
+              </thingCategories>
+              <socialPropernessMatters>true</socialPropernessMatters>
+              <tickerType>Rare</tickerType>
+            </ThingDef>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <success>Always</success>
+          <xpath>/Defs</xpath>
+          <value>
+            <ItemProcessor.CombinationDef>
+              <defName>RF_SmokerFishMeatToSmokedFishMeat</defName>
+              <building>VFEM_MeatSmoker</building>
+              <isCategoryRecipe>true</isCategoryRecipe>
+              <items>
+                <li>RF_RawSeafood</li>
+              </items>
+              <disallowedThingDefs>
+                <li>RF_SmokedFishMeat</li>
+                <li>Caviar</li>
+                <li>SalmonRoe</li>
+              </disallowedThingDefs>
+              <amount>
+                <li>75</li>
+              </amount>
+              <result>RF_SmokedFishMeat</result>
+              <yield>75</yield>
+              <useQualityIncreasing>false</useQualityIncreasing>
+              <singleTimeIfNotQualityIncreasing>3</singleTimeIfNotQualityIncreasing>
+            </ItemProcessor.CombinationDef>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <success>Always</success>
+          <xpath>/Defs/ItemProcessor.ItemAcceptedDef[defName = "VFEM_SmokerFirstItem"]/items</xpath>
+          <value>
+            <li>RF_RawSeafood</li>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!--Patchで追加される分-->
+  <!--VCE-->
+  <RF_CannedSeafood.label>魚介の缶詰</RF_CannedSeafood.label>
+  <RF_CannedSeafood.description>スチール缶に密閉された缶詰製品は、消費期限を無期限に延ばすことができます。缶から出してそのまま食べられますが、調理の材料として使用した方が、はるかに栄養価が高くなります。缶詰製品をそのまま摂取し過ぎると、血圧の上昇を引き起こす可能性があります。</RF_CannedSeafood.description>
+  <!--VFEM-->
+  <RF_SmokedFishMeat.label>魚介の燻製</RF_SmokedFishMeat.label>
+  <RF_SmokedFishMeat.description>燻製された魚介類の肉。まずまずの美味しさ。冷蔵なしでも長持ちします。旅行に最適です。</RF_SmokedFishMeat.description>
+</LanguageData>

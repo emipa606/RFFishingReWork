@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Cooking Expanded</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/RecipeDef[defName = "VCE_CookBakeFine" or 
+								defName = "VCE_CookBakeFineBulk" or 
+								defName = "VCE_CookBakeLavish" or 
+								defName = "VCE_CookBakeLavishBulk" or 
+								defName = "VCE_CookBakeGourmet" or 
+								defName = "VCE_CookMealGourmet" or 
+								defName = "VCE_CookSoupFine" or 
+								defName = "VCE_CookSoupLavish" or 
+								defName = "VCE_CookSoupGourmet"]/ingredients/li[1]/filter/categories</xpath>
+          <value>
+            <li>RF_RawSeafood</li>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Cooking Expanded - Stews</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/RecipeDef[defName = "VCE_CookStewFine" or defName = "VCE_CookStewLavish"]/ingredients/li[1]/filter/categories</xpath>
+          <value>
+            <li>RF_RawSeafood</li>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

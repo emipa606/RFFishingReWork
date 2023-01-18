@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Cooking Expanded</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/RecipeDef[defName = "CookMealGrilledFish" or defName = "CookMealGrilledFishBulk"]/recipeUsers</xpath>
+          <value>
+            <li>VCE_Grill</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName = "VCE_Grill"]/recipes</xpath>
+          <value>
+            <li>CookMealGrilledFish</li>
+            <li>CookMealGrilledFishBulk</li>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Furniture Expanded</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName = "Stone_Campfire"]/recipes</xpath>
+          <value>
+            <li>CookMealGrilledFish</li>
+            <li>CookMealGrilledFishBulk</li>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

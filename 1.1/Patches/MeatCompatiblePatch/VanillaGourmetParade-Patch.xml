@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Gourmet Parade</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/RecipeDef[defName = "Cook_VAGP_Piccata" or 
+								defName = "Cook_VAGP_PiccataBulk" or 
+								defName = "Cook_VAGP_MealSurvivalPack" or 
+								defName = "Cook_VAGP_MealSoldierPack" or 
+								defName = "Cook_VAGP_MealSurvivalPackBulk" or 
+								defName = "Cook_VAGP_MealSoldierPack" or 
+								defName = "Cook_VAGP_MealSoldierPackBulk"]/ingredients/li[1]/filter/categories</xpath>
+          <value>
+            <li>RF_RawSeafood</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/RecipeDef[defName = "Cook_VAGP_Soupingredients" or 
+								defName = "Cook_VAGP_SoupingredientsBulk" or 
+								defName = "Cook_VAGP_Stew" or 
+								defName = "Cook_VAGP_StewBulk" or 
+								defName = "Cook_VAGP_Jambalaya" or 
+								defName = "Cook_VAGP_JambalayaBulk"]/ingredients/li[2]/filter/categories</xpath>
+          <value>
+            <li>RF_RawSeafood</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/RecipeDef[defName = "Cook_VAGP_Pizza" or 
+								defName = "Cook_VAGP_PizzaBulk" or 
+								defName = "Cook_VAGP_Dria" or 
+								defName = "Cook_VAGP_DriaBulk" or 
+								defName = "Cook_VAGP_Gratin" or 
+								defName = "Cook_VAGP_GratinBulk"]/ingredients/li[3]/filter/categories</xpath>
+          <value>
+            <li>RF_RawSeafood</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/RecipeDef[defName = "Cook_VAGP_Piccata" or 
+								defName = "Cook_VAGP_PiccataBulk" or 
+								defName = "Cook_VAGP_Jambalaya" or 
+								defName = "Cook_VAGP_JambalayaBulk" or
+								defName = "Cook_VAGP_Pizza" or 
+								defName = "Cook_VAGP_PizzaBulk" or 
+								defName = "Cook_VAGP_Dria" or 
+								defName = "Cook_VAGP_DriaBulk" or 
+								defName = "Cook_VAGP_Gratin" or 
+								defName = "Cook_VAGP_GratinBulk"]/fixedIngredientFilter/categories</xpath>
+          <value>
+            <li>RF_RawSeafood</li>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

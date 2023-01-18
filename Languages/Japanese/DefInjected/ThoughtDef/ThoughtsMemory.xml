@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <RF_AteCaviar.stages.0.label>キャビアを食べた</RF_AteCaviar.stages.0.label>
+  <RF_AteCaviar.stages.0.description>私はキャビアをたらふく食べました. うーん,贅沢!</RF_AteCaviar.stages.0.description>
+  <RF_AteRawCrabMeat.stages.0.label>カニの身を食べた</RF_AteRawCrabMeat.stages.0.label>
+  <RF_AteRawCrabMeat.stages.0.description>生のカニの身を食べました. まあまあ美味しい.</RF_AteRawCrabMeat.stages.0.description>
+  <RF_AteSalmonRoe.stages.0.label>イクラを食べた</RF_AteSalmonRoe.stages.0.label>
+  <RF_AteSalmonRoe.stages.0.description>イクラを食べました. 結構おいしい!</RF_AteSalmonRoe.stages.0.description>
+  <RF_AteRawSeaFood.stages.0.label>海の味を味わった</RF_AteRawSeaFood.stages.0.label>
+  <RF_AteRawSeaFood.stages.0.description>新鮮な海鮮を味わいました. 磯の香りを感じました!</RF_AteRawSeaFood.stages.0.description>
+</LanguageData>

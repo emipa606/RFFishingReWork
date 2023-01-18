@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>[RF] Fishing-ReWork</name>
+  <author>Si-Cafe</author>
+  <supportedVersions>
+    <li>1.1</li>
+    <li>1.2</li>
+    <li>1.3</li>
+  </supportedVersions>
+  <packageId>RainbeausFishing.ReworkMod</packageId>
+  <incompatibleWith>
+    <li>firefoxpdm.RainbeausFishing</li>
+  </incompatibleWith>
+  <loadAfter>
+    <li>Agracore.BSM</li>
+    <li>OskarPotocki.VanillaFactionsExpanded.MedievalModule</li>
+  </loadAfter>
+  <description>Originally from https://ludeon.com/forums/index.php?topic=46165
+-Many new fish species have been added, inheriting the RF-Fishing code.
+However, most of the Defs data has been rewritten and is not compatible with the original RF-Fishing Mod.
+All textures have been redesigned.
+\n
+-(RF-Fishingコードを継承して、多くの新しい魚が追加されました。
+ほとんどのDefsデータは書き換えられており、元のRF-FishingModとは互換性がありません。
+すべてのテクスチャが一新されています。)
+</description>
+</ModMetaData>

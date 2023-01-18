@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- FISHY PRODUCTS -->
+  <RawFishMeat.label>魚の切り身</RawFishMeat.label>
+  <RawFishMeat.description>生魚の切り身. そのままでも食べられるかもしれませんが,調理した方がいいでしょう.</RawFishMeat.description>
+  <RawSalmonMeat.label>サーモンの切り身</RawSalmonMeat.label>
+  <RawSalmonMeat.description>生のサーモンの切り身. そのままでも食べられるかもしれませんが,調理した方がいいでしょう.</RawSalmonMeat.description>
+  <RawTunaMeat.label>マグロの身</RawTunaMeat.label>
+  <RawTunaMeat.description>生のマグロの切り身. そのままでも食べられるかもしれませんが,調理した方がいいでしょう.</RawTunaMeat.description>
+  <RawOctopusMeat.label>タコの切り身</RawOctopusMeat.label>
+  <RawOctopusMeat.description>生のタコの切り身. そのままでも食べられるかもしれませんが,調理した方がいいでしょう.</RawOctopusMeat.description>
+  <RawSquidMeat.label>イカの切り身</RawSquidMeat.label>
+  <RawSquidMeat.description>生イカの切り身.そのままでも食べられるかもしれませんが,調理した方がいいでしょう.</RawSquidMeat.description>
+  <RawEelMeat.label>うなぎの切り身</RawEelMeat.label>
+  <RawEelMeat.description>生のうなぎの切り身. そのままでも食べられるかもしれませんが,調理した方がいいでしょう.</RawEelMeat.description>
+  <JellyfishMeat.label>クラゲの肉</JellyfishMeat.label>
+  <JellyfishMeat.description>生のクラゲの肉. そのままでも食べられるかもしれませんが,調理した方がいいでしょう.</JellyfishMeat.description>
+  <PufferfishMeat.label>フグの切り身</PufferfishMeat.label>
+  <PufferfishMeat.description>生のフグの切り身. そのままでも食べられるかもしれませんが,適切な下処理をしなければ毒があるかもしれないので推奨はできません.</PufferfishMeat.description>
+  <SeaCucumberMeat.label>ナマコの身</SeaCucumberMeat.label>
+  <SeaCucumberMeat.description>生のナマコ. 食べられますが,薬を作るために利用するのがいいでしょう.</SeaCucumberMeat.description>
+  <RawCrabMeat.label>カニの身</RawCrabMeat.label>
+  <RawCrabMeat.description>生のカニの身. 生のまま食べても美味しいですし,調理に使用する事もできます.</RawCrabMeat.description>
+  <RawShellfishMeat.label>貝の身</RawShellfishMeat.label>
+  <RawShellfishMeat.description>生の貝類の身. そのままでも食べられるかもしれませんが,調理した方がいいでしょう.</RawShellfishMeat.description>
+  <RawShrimpMeat.label>エビの身</RawShrimpMeat.label>
+  <RawShrimpMeat.description>生のエビの身. そのままでも食べられるかもしれませんが,調理した方がいいでしょう.</RawShrimpMeat.description>
+  <SalmonRoe.label>イクラ</SalmonRoe.label>
+  <SalmonRoe.description>鮭から獲れたイクラ. 料理の材料としても使えますし,そのまま食べても美味しいですが,お寿司にするのが一番です.</SalmonRoe.description>
+  <Caviar.label>キャビア</Caviar.label>
+  <Caviar.description>塩漬けされたチョウザメの魚卵. 最高の珍味です.</Caviar.description>
+  <SquidLeather.label>イカの皮</SquidLeather.label>
+  <SquidLeather.description>この干物のようなお粗末な革は,イカの皮から作られています.</SquidLeather.description>
+  <SquidLeather.stuffProps.stuffAdjective>イカの皮</SquidLeather.stuffProps.stuffAdjective>
+  <EelLeather.label>うなぎの皮</EelLeather.label>
+  <EelLeather.description>革･･･と分類されていますが,これはうなぎの皮から作られています.</EelLeather.description>
+  <EelLeather.stuffProps.stuffAdjective>うなぎの皮</EelLeather.stuffProps.stuffAdjective>
+</LanguageData>

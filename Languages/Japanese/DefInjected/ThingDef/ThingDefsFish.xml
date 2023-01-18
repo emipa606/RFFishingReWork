@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- GENERIC FISH -->
+  <RF_Fish.label>魚(生)</RF_Fish.label>
+  <RF_Fish.description>生の魚. 食べる前に下処理する必要があります.</RF_Fish.description>
+  <RF_FishB.label>タイ(生)</RF_FishB.label>
+  <RF_FishB.description>生のタイ. 食べる前に下処理する必要があります.</RF_FishB.description>
+  <RF_FishTiny.label>小魚(生)</RF_FishTiny.label>
+  <RF_FishTiny.description>小さい生の魚. 丸焼きにして食べるのにちょうどいいサイズです. 切り身にするよりもそのまま焼いて食べた方が無駄なくより多くの栄養を得ることができるでしょう.</RF_FishTiny.description>
+  <RF_Arapaima.label>ピラルク(生)</RF_Arapaima.label>
+  <RF_Arapaima.description>ピラルクは,熱帯地域特有の大きな淡水魚です. 食べる前に下処理する必要があります.</RF_Arapaima.description>
+  <RF_Piranha.label>ピラニア(生)</RF_Piranha.label>
+  <RF_Piranha.description>ピラニアは強力な顎と鋭い歯で知られる熱帯魚です. 食べる前に下処理する必要があります.</RF_Piranha.description>
+  <RF_Salmon.label>サケ(生)</RF_Salmon.label>
+  <RF_Salmon.description>生のサケ. 赤身の魚肉とイクラが取れます. 食べる前に下処理する必要があります.</RF_Salmon.description>
+  <RF_Tuna.label>マグロ(生)</RF_Tuna.label>
+  <RF_Tuna.description>生のマグロ. マグロは暖海性で外洋性,回遊性の大型肉食魚です. 食べる前にきれいに下処理する必要があります.</RF_Tuna.description>
+  <RF_Sturgeon.label>チョウザメ(生)</RF_Sturgeon.label>
+  <RF_Sturgeon.description>チョウザメは亜熱帯,温帯,亜北極地方に生息する大きな淡水魚です. 使える肉の量はそれほど多くありませんが,メスのチョウザメからはキャビアが取れます.</RF_Sturgeon.description>
+  <RF_SturgeonCaviar.label>チョウザメ(生)</RF_SturgeonCaviar.label>
+  <RF_SturgeonCaviar.description>チョウザメは亜熱帯,温帯,亜北極地方に生息する大きな淡水魚です. 使える肉の量はそれほど多くありませんが,メスのチョウザメからはキャビアが取れます.</RF_SturgeonCaviar.description>
+  <RF_Bass.label>バス(生)</RF_Bass.label>
+  <RF_Bass.description>バスは淡水性と海洋性の両方の多くの種類の魚が共有する名前です. 食べる前に下処理する必要があります.</RF_Bass.description>
+  <RF_Catfish.label>ナマズ(生)</RF_Catfish.label>
+  <RF_Catfish.description>ナマズは河川や湖沼に生息する肉食性の大きな淡水魚です. 食べる前に下処理する必要があります.</RF_Catfish.description>
+  <RF_Eel.label>うなぎ(生)</RF_Eel.label>
+  <RF_Eel.description>生のうなぎ. 食べる前にきれいに下処理する必要があります. うなぎから獲れる皮も何かに使えそうです.</RF_Eel.description>
+  <RF_Jellyfish.label>クラゲ(生)</RF_Jellyfish.label>
+  <RF_Jellyfish.description>生のクラゲ. クラゲは水中で浮遊生活をする刺胞動物です. 不意に触れると怪我をする恐れがあります. 食べる前にきれいに下処理する必要があります.</RF_Jellyfish.description>
+  <RF_Pufferfish.label>フグ(生)</RF_Pufferfish.label>
+  <RF_Pufferfish.description>生のフグ. 生のまま食べるのは非常に危険です. 食べる前にきれいに下処理する必要があります.</RF_Pufferfish.description>
+  <RF_SeaCucumber.label>ナマコ(生)</RF_SeaCucumber.label>
+  <RF_SeaCucumber.description>生のナマコ. 食べる前にきれいに下処理する必要があります. ナマコの身は薬の原料にもなります.</RF_SeaCucumber.description>
+  <RF_Squid.label>イカ(生)</RF_Squid.label>
+  <RF_Squid.description>生のイカ. 食べる前にきれいに下処理する必要があります. イカから獲れる皮も何かに使えそうです.</RF_Squid.description>
+  <RF_Octopus.label>タコ(生)</RF_Octopus.label>
+  <RF_Octopus.description>生のタコ.タコは主に岩礁や砂地に生息する軟体動物です. 時々カニ籠に入っている事があります.食べる前にきれいに下処理する必要があります.</RF_Octopus.description>
+  <RF_Clownfish.label>カクレクマノミ(生)</RF_Clownfish.label>
+  <RF_Clownfish.description>生のカクレクマノミ. 食べる前にきれいに下処理する必要があります.</RF_Clownfish.description>
+  <RF_Anchovies.label>アンチョビ(生)</RF_Anchovies.label>
+  <RF_Anchovies.description>生のアンチョビ. 総称としてアンチョビと呼ばれる小魚です. 食べる前にきれいに下処理する必要があります.</RF_Anchovies.description>
+  <RF_Sardines.label>イワシ(生)</RF_Sardines.label>
+  <RF_Sardines.description>生のイワシ.イワシは群れで行動する海水魚で,全長は成魚で10–30cmほどです. 食べる前にきれいに下処理する必要があります.</RF_Sardines.description>
+  <!-- SHELLFISH -->
+  <RF_Lobster.label>ロブスター(生)</RF_Lobster.label>
+  <RF_Lobster.description>生のロブスター. 巨大なゴキブリのように見えますが,実際は大きなエビです. 食べる前にきれいに下処理する必要があります.</RF_Lobster.description>
+  <RF_Crab.label>カニ(生)</RF_Crab.label>
+  <RF_Crab.description>小さな食用のカニ. 食べる前にきれいに下処理する必要があります.</RF_Crab.description>
+  <RF_Kingcrab.label>タラバガニ(生)</RF_Kingcrab.label>
+  <RF_Kingcrab.description>大きな食用のカニ. 食べる前にきれいに下処理する必要があります.</RF_Kingcrab.description>
+  <RF_Crayfish.label>ザリガニ(生)</RF_Crayfish.label>
+  <RF_Crayfish.description>生のザリガニ.食べる前にきれいに下処理する必要があります.ザリガニからは何故かエビの身が捕れます.</RF_Crayfish.description>
+  <RF_Snail.label>エスカルゴ(生)</RF_Snail.label>
+  <RF_Snail.description>生のエスカルゴ.食べる前にきれいに下処理する必要があります.でもこれってカタツムリ...?</RF_Snail.description>
+  <RF_Shrimp.label>エビ(生)</RF_Shrimp.label>
+  <RF_Shrimp.description>生のエビ. 食べる前にきれいに下処理する必要があります.</RF_Shrimp.description>
+  <RF_Mussel.label>ムール貝(生)</RF_Mussel.label>
+  <RF_Mussel.description>生のムール貝. 食べる前にきれいに下処理する必要があります.</RF_Mussel.description>
+  <RF_Scallops.label>ホタテ(生)</RF_Scallops.label>
+  <RF_Scallops.description>生のホタテ. 食べる前にきれいに下処理する必要があります.</RF_Scallops.description>
+</LanguageData>

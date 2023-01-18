@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Cooking Expanded - Sushi</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <!--If with VFE-->
+      <operations>
+        <li Class="PatchOperationFindMod">
+          <mods>
+            <li>Vanilla Fishing Expanded</li>
+          </mods>
+          <match Class="PatchOperationSequence">
+            <operations>
+              <li Class="PatchOperationInsert">
+                <xpath>/Defs/RecipeDef[@Name = "VCE_CookSushiMealBase" or 
+											@Name = "VCE_CookFineSushiMealBase" or 
+											@Name = "VCE_CookGourmetSushiMealBase"]/fixedIngredientFilter/categories/li[text()="VCEF_RawFishCategory"]</xpath>
+                <value>
+                  <li>RF_RawSeafood</li>
+                </value>
+              </li>
+              <li Class="PatchOperationInsert">
+                <xpath>/Defs/RecipeDef[@Name = "VCE_CookSushiMealBase" or 
+										@Name = "VCE_CookFineSushiMealBase" or 
+										@Name = "VCE_CookGourmetSushiMealBase"]/defaultIngredientFilter/categories/li[text()="VCEF_RawFishCategory"]</xpath>
+                <value>
+                  <li>RF_RawSeafood</li>
+                </value>
+              </li>
+              <!-- sushi recipe ingredients fix -->
+              <li Class="PatchOperationInsert">
+                <xpath>/Defs/RecipeDef[defName = "VCE_CookChirashizushiSimple" or
+										defName = "VCE_CookChirashizushiSimpleBulk" or 
+										defName = "VCE_CookNorimakiSimple" or 
+										defName = "VCE_CookNorimakiSimpleBulk" or 
+										defName = "VCE_CookUramakiFine" or 
+										defName = "VCE_CookUramakiFineBulk" or 
+										defName = "VCE_CookNigiriFine" or 
+										defName = "VCE_CookNigiriFineBulk" or 
+										defName = "VCE_CookTemakiLavish" or 
+										defName = "VCE_CookTemakiLavishBulk" or 
+										defName = "VCE_CookFutomakiLavish" or 
+										defName = "VCE_CookFutomakiLavishBulk" or 
+										defName = "VCE_CookGunkanmakiGourmet" or 
+										defName = "VCE_CookOshizushiiGourmet"]/ingredients/li/filter/categories/li[text()="VCEF_RawFishCategory"]</xpath>
+                <value>
+                  <li>RF_RawSeafood</li>
+                </value>
+              </li>
+            </operations>
+          </match>
+          <!--If without  VFE-->
+          <nomatch Class="PatchOperationSequence">
+            <operations>
+              <li Class="PatchOperationReplace">
+                <xpath>/Defs/RecipeDef[@Name = "VCE_CookSushiMealBase" or 
+											@Name = "VCE_CookFineSushiMealBase" or 
+											@Name = "VCE_CookGourmetSushiMealBase"]/fixedIngredientFilter/categories/li[text()="VCEF_RawFishCategory"]</xpath>
+                <value>
+                  <li>RF_RawSeafood</li>
+                </value>
+              </li>
+              <li Class="PatchOperationReplace">
+                <xpath>/Defs/RecipeDef[@Name = "VCE_CookSushiMealBase" or 
+										@Name = "VCE_CookFineSushiMealBase" or 
+										@Name = "VCE_CookGourmetSushiMealBase"]/defaultIngredientFilter/categories/li[text()="VCEF_RawFishCategory"]</xpath>
+                <value>
+                  <li>RF_RawSeafood</li>
+                </value>
+              </li>
+              <!-- sushi recipe ingredients fix -->
+              <li Class="PatchOperationReplace">
+                <xpath>/Defs/RecipeDef[defName = "VCE_CookChirashizushiSimple" or
+										defName = "VCE_CookChirashizushiSimpleBulk" or 
+										defName = "VCE_CookNorimakiSimple" or 
+										defName = "VCE_CookNorimakiSimpleBulk" or 
+										defName = "VCE_CookUramakiFine" or 
+										defName = "VCE_CookUramakiFineBulk" or 
+										defName = "VCE_CookNigiriFine" or 
+										defName = "VCE_CookNigiriFineBulk" or 
+										defName = "VCE_CookTemakiLavish" or 
+										defName = "VCE_CookTemakiLavishBulk" or 
+										defName = "VCE_CookFutomakiLavish" or 
+										defName = "VCE_CookFutomakiLavishBulk" or 
+										defName = "VCE_CookGunkanmakiGourmet" or 
+										defName = "VCE_CookOshizushiiGourmet"]/ingredients/li/filter/categories/li[text()="VCEF_RawFishCategory"]</xpath>
+                <value>
+                  <li>RF_RawSeafood</li>
+                </value>
+              </li>
+              <li Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[defName = "VCE_HumanSurimi"]/thingCategories/li[text()="VCEF_RawFishCategory"]</xpath>
+                <value>
+                  <li>RF_RawSeafood</li>
+                </value>
+              </li>
+            </operations>
+          </nomatch>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

@@ -1,0 +1,675 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- GENERIC FISH -->
+  <ThingDef Name="RBB_FishBase" Abstract="True">
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <useHitPoints>true</useHitPoints>
+    <selectable>true</selectable>
+    <altitudeLayer>Item</altitudeLayer>
+    <stackLimit>1</stackLimit>
+    <ingestible>
+      <foodType>Corpse</foodType>
+      <preferability>NeverForNutrition</preferability>
+      <tasteThought>AteRawFood</tasteThought>
+      <ingestEffect>EatMeat</ingestEffect>
+      <ingestSound>RawMeat_Eat</ingestSound>
+    </ingestible>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>10</DeteriorationRate>
+      <Beauty>-4</Beauty>
+      <FoodPoisonChanceFixedHuman>0.05</FoodPoisonChanceFixedHuman>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Forbiddable" />
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>2</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+      <li Class="CompProperties_FoodPoisonable" />
+    </comps>
+    <tickerType>Rare</tickerType>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <alwaysHaulable>true</alwaysHaulable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <rotatable>false</rotatable>
+    <pathCost>15</pathCost>
+  </ThingDef>
+  <ThingDef ParentName="RBB_FishBase">
+    <defName>RF_Fish</defName>
+    <label>fish</label>
+    <description>Raw fish. Needs to be prepare before it can be eaten.</description>
+    <graphicData>
+      <texPath>Things/RawFishs/RawFish</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <Nutrition>2</Nutrition>
+      <Mass>2</Mass>
+      <MarketValue>60</MarketValue>
+    </statBases>
+    <thingCategories>
+      <li>CorpsesFish</li>
+    </thingCategories>
+    <butcherProducts>
+      <RawFishMeat>40</RawFishMeat>
+    </butcherProducts>
+  </ThingDef>
+  <ThingDef ParentName="RBB_FishBase">
+    <defName>RF_FishB</defName>
+    <label>sea bream</label>
+    <description>A raw sea bream. Needs to be prepare before it can be eaten.</description>
+    <graphicData>
+      <texPath>Things/RawFishs/Seabream</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <Nutrition>2</Nutrition>
+      <Mass>2</Mass>
+      <MarketValue>60</MarketValue>
+    </statBases>
+    <thingCategories>
+      <li>CorpsesFish</li>
+    </thingCategories>
+    <butcherProducts>
+      <RawFishMeat>40</RawFishMeat>
+    </butcherProducts>
+  </ThingDef>
+  <ThingDef ParentName="RBB_FishBase">
+    <defName>RF_FishTiny</defName>
+    <label>tiny fish</label>
+    <description>Small raw fish. It's just the right size to grill and eat. You'll get more nutrition without waste if you grilled it as it is rather than fill it.</description>
+    <graphicData>
+      <texPath>Things/RawFishs/RawFishTiny</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.7,0.7)</drawSize>
+    </graphicData>
+    <statBases>
+      <Nutrition>0.75</Nutrition>
+      <Mass>0.1</Mass>
+      <MarketValue>22.5</MarketValue>
+    </statBases>
+    <thingCategories>
+      <li>CorpsesFish</li>
+    </thingCategories>
+    <butcherProducts>
+      <RawFishMeat>15</RawFishMeat>
+    </butcherProducts>
+  </ThingDef>
+  <!-- RAINFOREST FISH -->
+  <ThingDef ParentName="RBB_FishBase">
+    <defName>RF_Arapaima</defName>
+    <label>arapaima</label>
+    <description>Arapaima are large freshwater fish native to tropical regions. Needs to be prepare before it can be eaten.</description>
+    <graphicData>
+      <texPath>Things/RawFishs/Arapaima</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <statBases>
+      <Nutrition>3.5</Nutrition>
+      <Mass>15</Mass>
+      <MarketValue>105</MarketValue>
+    </statBases>
+    <thingCategories>
+      <li>CorpsesFish</li>
+    </thingCategories>
+    <butcherProducts>
+      <RawFishMeat>70</RawFishMeat>
+    </butcherProducts>
+  </ThingDef>
+  <ThingDef ParentName="RBB_FishBase">
+    <defName>RF_Piranha</defName>
+    <label>piranha</label>
+    <description>Piranha are tropical fish known for their sharp teeth and powerful jaws. Needs to be prepare before it can be eaten.</description>
+    <graphicData>
+      <texPath>Things/RawFishs/Piranha</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <Nutrition>1.25</Nutrition>
+      <Mass>0.225</Mass>
+      <MarketValue>37.5</MarketValue>
+    </statBases>
+    <thingCategories>
+      <li>CorpsesFish</li>
+    </thingCategories>
+    <butcherProducts>
+      <RawFishMeat>25</RawFishMeat>
+    </butcherProducts>
+  </ThingDef>
+  <!-- COLD BIOME FISH -->
+  <ThingDef ParentName="RBB_FishBase">
+    <defName>RF_Salmon</defName>
+    <label>salmon</label>
+    <description>Raw salmon. You can get salmon meat and salmon roe. You need to prepare it before eating.</description>
+    <graphicData>
+      <texPath>Things/RawFishs/Salmon</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1.2,1.2)</drawSize>
+    </graphicData>
+    <statBases>
+      <Nutrition>6.0</Nutrition>
+      <Mass>10</Mass>
+      <MarketValue>180</MarketValue>
+    </statBases>
+    <thingCategories>
+      <li>CorpsesFish</li>
+    </thingCategories>
+    <butcherProducts>
+      <RawSalmonMeat>100</RawSalmonMeat>
+      <SalmonRoe>20</SalmonRoe>
+    </butcherProducts>
+  </ThingDef>
+  <ThingDef ParentName="RBB_FishBase">
+    <defName>RF_Tuna</defName>
+    <label>tuna</label>
+    <description>Raw tuna. Tuna is a large carnivorous fish that is warm-sea, open-sea, and migratory.</description>
+    <graphicData>
+      <texPath>Things/RawFishs/Tuna</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <statBases>
+      <Nutrition>10</Nutrition>
+      <Mass>50</Mass>
+      <MarketValue>250</MarketValue>
+    </statBases>
+    <thingCategories>
+      <li>CorpsesFish</li>
+    </thingCategories>
+    <butcherProducts>
+      <RawTunaMeat>200</RawTunaMeat>
+    </butcherProducts>
+  </ThingDef>
+  <!-- TEMPERATE FOREST FISH -->
+  <ThingDef ParentName="RBB_FishBase">
+    <defName>RF_Sturgeon</defName>
+    <label>sturgeon</label>
+    <description>Sturgeon are large freshwater fish native to subtropical, temperate and sub-Arctic regions. Though not an exceptional source of meat, some sturgeon can be harvested for their roe (eggs), which can be made into caviar.</description>
+    <graphicData>
+      <texPath>Things/RawFishs/Sturgeon</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <statBases>
+      <Nutrition>2</Nutrition>
+      <Mass>14.5</Mass>
+      <MarketValue>80</MarketValue>
+    </statBases>
+    <thingCategories>
+      <li>CorpsesFish</li>
+    </thingCategories>
+    <butcherProducts>
+      <RawFishMeat>35</RawFishMeat>
+    </butcherProducts>
+  </ThingDef>
+  <ThingDef ParentName="RBB_FishBase">
+    <defName>RF_SturgeonCaviar</defName>
+    <label>sturgeon</label>
+    <description>Sturgeon are large freshwater fish native to subtropical, temperate and sub-Arctic regions. Though not an exceptional source of meat, some sturgeon can be harvested for their roe (eggs), which can be made into caviar.</description>
+    <graphicData>
+      <texPath>Things/RawFishs/Sturgeon</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <statBases>
+      <Nutrition>2</Nutrition>
+      <Mass>14.5</Mass>
+      <MarketValue>80</MarketValue>
+    </statBases>
+    <thingCategories>
+      <li>CorpsesFish</li>
+    </thingCategories>
+    <butcherProducts>
+      <RawFishMeat>35</RawFishMeat>
+      <Caviar>10</Caviar>
+    </butcherProducts>
+  </ThingDef>
+  <ThingDef ParentName="RBB_FishBase">
+    <defName>RF_Bass</defName>
+    <label>bass</label>
+    <description>"Bass" is a name shared by many species of fish, including both freshwater and marine species. Needs to be prepare before it can be eaten.</description>
+    <graphicData>
+      <texPath>Things/RawFishs/Bass</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <Nutrition>1.5</Nutrition>
+      <Mass>1.5</Mass>
+      <MarketValue>45</MarketValue>
+    </statBases>
+    <thingCategories>
+      <li>CorpsesFish</li>
+    </thingCategories>
+    <butcherProducts>
+      <RawFishMeat>30</RawFishMeat>
+    </butcherProducts>
+  </ThingDef>
+  <ThingDef ParentName="RBB_FishBase">
+    <defName>RF_Catfish</defName>
+    <label>catfish</label>
+    <description>Catfish are large carnivorous freshwater fish that lives in rivers and lakes. Needs to be prepare before it can be eaten.</description>
+    <graphicData>
+      <texPath>Things/RawFishs/Catfish</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <statBases>
+      <Nutrition>2.75</Nutrition>
+      <Mass>10.0</Mass>
+      <MarketValue>82.5</MarketValue>
+    </statBases>
+    <thingCategories>
+      <li>CorpsesFish</li>
+    </thingCategories>
+    <butcherProducts>
+      <RawEelMeat>55</RawEelMeat>
+    </butcherProducts>
+  </ThingDef>
+  <!-- (MOSTLY) OCEAN FISH -->
+  <ThingDef ParentName="RBB_FishBase">
+    <defName>RF_Eel</defName>
+    <label>eel</label>
+    <description>A raw eel. Needs to be prepare before it can be eaten. It seems that the skin caught from eel can also be used for something.</description>
+    <graphicData>
+      <texPath>Things/RawFishs/Eel</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <Nutrition>0.5</Nutrition>
+      <Mass>0.3</Mass>
+      <MarketValue>20</MarketValue>
+    </statBases>
+    <thingCategories>
+      <li>CorpsesFish</li>
+    </thingCategories>
+    <butcherProducts>
+      <RawEelMeat>10</RawEelMeat>
+      <EelLeather>5</EelLeather>
+    </butcherProducts>
+  </ThingDef>
+  <ThingDef ParentName="RBB_FishBase">
+    <defName>RF_Jellyfish</defName>
+    <label>jellyfish</label>
+    <description>Jellyfish are cnidarians that live floating in water. Unexpected contact can cause injuries. Needs to be prepare before it can be eaten.</description>
+    <graphicData>
+      <texPath>Things/RawFishs/Jellyfish</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <Nutrition>1.0</Nutrition>
+      <Mass>0.3</Mass>
+      <MarketValue>30</MarketValue>
+    </statBases>
+    <thingCategories>
+      <li>CorpsesFish</li>
+    </thingCategories>
+    <butcherProducts>
+      <JellyfishMeat>20</JellyfishMeat>
+    </butcherProducts>
+  </ThingDef>
+  <ThingDef ParentName="RBB_FishBase">
+    <defName>RF_Pufferfish</defName>
+    <label>pufferfish</label>
+    <description>A pufferfish. It is very dangerous to eat raw. Needs to be prepare before it can be eaten.</description>
+    <graphicData>
+      <texPath>Things/RawFishs/Pufferfish</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <Nutrition>1.0</Nutrition>
+      <Mass>0.3</Mass>
+      <MarketValue>30</MarketValue>
+      <FoodPoisonChanceFixedHuman>0.75</FoodPoisonChanceFixedHuman>
+    </statBases>
+    <ingestible>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>RF_AteRawPufferfish</hediffDef>
+          <severity>1</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <thingCategories>
+      <li>CorpsesFish</li>
+    </thingCategories>
+    <butcherProducts>
+      <PufferfishMeat>20</PufferfishMeat>
+    </butcherProducts>
+    <comps>
+      <li Class="CompProperties_FoodPoisonable" />
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="RBB_FishBase">
+    <defName>RF_SeaCucumber</defName>
+    <label>sea cucumber</label>
+    <description>A sea cucumber. Needs to be prepare before it can be eaten. Sea cucumber meat is a raw material for medicine.</description>
+    <graphicData>
+      <texPath>Things/RawFishs/SeaCucumber</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.8,0.8)</drawSize>
+    </graphicData>
+    <statBases>
+      <Nutrition>1</Nutrition>
+      <Mass>0.3</Mass>
+      <MarketValue>30</MarketValue>
+    </statBases>
+    <thingCategories>
+      <li>CorpsesFish</li>
+    </thingCategories>
+    <butcherProducts>
+      <SeaCucumberMeat>20</SeaCucumberMeat>
+    </butcherProducts>
+  </ThingDef>
+  <ThingDef ParentName="RBB_FishBase">
+    <defName>RF_Squid</defName>
+    <label>squid</label>
+    <description>A squid. Needs to be prepare before it can be eaten. It seems that the skin caught from squid can also be used for something.</description>
+    <graphicData>
+      <texPath>Things/RawFishs/Squid</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <Nutrition>2</Nutrition>
+      <Mass>0.6</Mass>
+      <MarketValue>60</MarketValue>
+    </statBases>
+    <thingCategories>
+      <li>CorpsesFish</li>
+    </thingCategories>
+    <butcherProducts>
+      <RawSquidMeat>40</RawSquidMeat>
+      <SquidLeather>10</SquidLeather>
+    </butcherProducts>
+  </ThingDef>
+  <ThingDef ParentName="RBB_FishBase">
+    <defName>RF_Octopus</defName>
+    <label>octopus</label>
+    <description>A raw octopus. Octopus are mollusk that mainly inhabits reefs and sands, sometimes in shellfush trap. Needs to be prepare before it can be eaten.</description>
+    <graphicData>
+      <texPath>Things/RawFishs/Octopus</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <Nutrition>2</Nutrition>
+      <Mass>0.6</Mass>
+      <MarketValue>60</MarketValue>
+    </statBases>
+    <thingCategories>
+      <li>CorpsesFish</li>
+    </thingCategories>
+    <butcherProducts>
+      <RawOctopusMeat>40</RawOctopusMeat>
+    </butcherProducts>
+  </ThingDef>
+  <!-- SHELLFISH -->
+  <ThingDef ParentName="RBB_FishBase">
+    <defName>RF_Lobster</defName>
+    <label>lobster</label>
+    <description>A raw lobster. It looks like a giant shrimp, but it's actually a big shrimp. Needs to be prepare before it can be eaten.</description>
+    <graphicData>
+      <texPath>Things/RawFishs/Lobster</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <ingestible>
+      <specialThoughtAsIngredient>RF_AteRawSeaFood</specialThoughtAsIngredient>
+    </ingestible>
+    <statBases>
+      <Nutrition>2</Nutrition>
+      <Mass>0.5</Mass>
+      <MarketValue>60</MarketValue>
+    </statBases>
+    <thingCategories>
+      <li>CorpsesFish</li>
+    </thingCategories>
+    <butcherProducts>
+      <RawShrimpMeat>40</RawShrimpMeat>
+    </butcherProducts>
+    <socialPropernessMatters>true</socialPropernessMatters>
+  </ThingDef>
+  <ThingDef ParentName="RBB_FishBase">
+    <defName>RF_Crab</defName>
+    <label>crabs</label>
+    <description>Raw small edible crabs. Needs to be prepare before it can be eaten.</description>
+    <graphicData>
+      <texPath>Things/RawFishs/Crab</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <ingestible>
+      <specialThoughtAsIngredient>RF_AteRawSeaFood</specialThoughtAsIngredient>
+    </ingestible>
+    <statBases>
+      <Nutrition>1</Nutrition>
+      <Mass>0.3</Mass>
+      <MarketValue>20</MarketValue>
+    </statBases>
+    <thingCategories>
+      <li>CorpsesFish</li>
+    </thingCategories>
+    <butcherProducts>
+      <RawCrabMeat>20</RawCrabMeat>
+    </butcherProducts>
+    <socialPropernessMatters>true</socialPropernessMatters>
+  </ThingDef>
+  <ThingDef ParentName="RBB_FishBase">
+    <defName>RF_Kingcrab</defName>
+    <label>king crab</label>
+    <description>Raw big edible crabs. Needs to be prepare before it can be eaten.</description>
+    <graphicData>
+      <texPath>Things/RawFishs/Kingcrab</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <ingestible>
+      <specialThoughtAsIngredient>RF_AteRawSeaFood</specialThoughtAsIngredient>
+    </ingestible>
+    <statBases>
+      <Nutrition>2</Nutrition>
+      <Mass>1.2</Mass>
+      <MarketValue>60</MarketValue>
+    </statBases>
+    <thingCategories>
+      <li>CorpsesFish</li>
+    </thingCategories>
+    <butcherProducts>
+      <RawCrabMeat>40</RawCrabMeat>
+    </butcherProducts>
+    <socialPropernessMatters>true</socialPropernessMatters>
+  </ThingDef>
+  <ThingDef ParentName="RBB_FishBase">
+    <defName>RF_Crayfish</defName>
+    <label>crayfish</label>
+    <description>A crayfish. Needs to be prepare before it can be eaten. Dismantling the crayfish will catch the shrimp meat.</description>
+    <graphicData>
+      <texPath>Things/RawFishs/Crayfish</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <ingestible>
+      <specialThoughtAsIngredient>RF_AteRawSeaFood</specialThoughtAsIngredient>
+    </ingestible>
+    <statBases>
+      <Nutrition>0.5</Nutrition>
+      <Mass>0.1</Mass>
+      <MarketValue>30</MarketValue>
+    </statBases>
+    <thingCategories>
+      <li>CorpsesFish</li>
+    </thingCategories>
+    <butcherProducts>
+      <RawShrimpMeat>20</RawShrimpMeat>
+    </butcherProducts>
+    <socialPropernessMatters>true</socialPropernessMatters>
+  </ThingDef>
+  <ThingDef ParentName="RBB_FishBase">
+    <defName>RF_Snail</defName>
+    <label>snails</label>
+    <description>Raw snails. Needs to be prepare before it can be eaten. After all, it would still be a snail.</description>
+    <graphicData>
+      <texPath>Things/RawFishs/Snail</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.7,0.7)</drawSize>
+    </graphicData>
+    <ingestible>
+      <specialThoughtAsIngredient>RF_AteRawSeaFood</specialThoughtAsIngredient>
+    </ingestible>
+    <statBases>
+      <Nutrition>1</Nutrition>
+      <Mass>0.3</Mass>
+      <MarketValue>30</MarketValue>
+    </statBases>
+    <thingCategories>
+      <li>CorpsesFish</li>
+    </thingCategories>
+    <butcherProducts>
+      <RawShellfishMeat>20</RawShellfishMeat>
+    </butcherProducts>
+    <socialPropernessMatters>true</socialPropernessMatters>
+  </ThingDef>
+  <ThingDef ParentName="RBB_FishBase">
+    <defName>RF_Shrimp</defName>
+    <label>shrimps</label>
+    <description>Raw shrimps. Needs to be prepare before it can be eaten.</description>
+    <graphicData>
+      <texPath>Things/RawFishs/Shrimp</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <ingestible>
+      <specialThoughtAsIngredient>RF_AteRawSeaFood</specialThoughtAsIngredient>
+    </ingestible>
+    <statBases>
+      <Nutrition>1</Nutrition>
+      <Mass>0.3</Mass>
+      <MarketValue>22.5</MarketValue>
+    </statBases>
+    <thingCategories>
+      <li>CorpsesFish</li>
+    </thingCategories>
+    <butcherProducts>
+      <RawShrimpMeat>20</RawShrimpMeat>
+    </butcherProducts>
+    <socialPropernessMatters>true</socialPropernessMatters>
+  </ThingDef>
+  <ThingDef ParentName="RBB_FishBase">
+    <defName>RF_Mussel</defName>
+    <label>mussels</label>
+    <description>Raw mussels. Needs to be prepare before it can be eaten.</description>
+    <graphicData>
+      <texPath>Things/RawFishs/Mussel</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <ingestible>
+      <specialThoughtAsIngredient>RF_AteRawSeaFood</specialThoughtAsIngredient>
+    </ingestible>
+    <statBases>
+      <Nutrition>1</Nutrition>
+      <Mass>0.3</Mass>
+      <MarketValue>30</MarketValue>
+    </statBases>
+    <thingCategories>
+      <li>CorpsesFish</li>
+    </thingCategories>
+    <butcherProducts>
+      <RawShellfishMeat>20</RawShellfishMeat>
+    </butcherProducts>
+    <socialPropernessMatters>true</socialPropernessMatters>
+  </ThingDef>
+  <ThingDef ParentName="RBB_FishBase">
+    <defName>RF_Scallops</defName>
+    <label>scallops</label>
+    <description>Raw scallops. Needs to be prepare before it can be eaten.</description>
+    <graphicData>
+      <texPath>Things/RawFishs/Scallops</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <ingestible>
+      <specialThoughtAsIngredient>RF_AteRawSeaFood</specialThoughtAsIngredient>
+    </ingestible>
+    <statBases>
+      <Nutrition>1</Nutrition>
+      <Mass>0.3</Mass>
+      <MarketValue>30</MarketValue>
+    </statBases>
+    <thingCategories>
+      <li>CorpsesFish</li>
+    </thingCategories>
+    <butcherProducts>
+      <RawShellfishMeat>20</RawShellfishMeat>
+    </butcherProducts>
+    <socialPropernessMatters>true</socialPropernessMatters>
+  </ThingDef>
+  <ThingDef ParentName="RBB_FishBase">
+    <defName>RF_Clownfish</defName>
+    <label>clownfish</label>
+    <description>A raw clownfish. Needs to be prepare before it can be eaten.</description>
+    <graphicData>
+      <texPath>Things/RawFishs/Clownfish</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <ingestible>
+      <specialThoughtAsIngredient>RF_AteRawSeaFood</specialThoughtAsIngredient>
+    </ingestible>
+    <statBases>
+      <Nutrition>1</Nutrition>
+      <Mass>0.3</Mass>
+      <MarketValue>30</MarketValue>
+    </statBases>
+    <thingCategories>
+      <li>CorpsesFish</li>
+    </thingCategories>
+    <butcherProducts>
+      <RawFishMeat>20</RawFishMeat>
+    </butcherProducts>
+    <socialPropernessMatters>true</socialPropernessMatters>
+  </ThingDef>
+  <ThingDef ParentName="RBB_FishBase">
+    <defName>RF_Anchovies</defName>
+    <label>anchovies</label>
+    <description>Raw anchovies. Small fish generically called anchovies. Needs to be prepare before it can be eaten.</description>
+    <graphicData>
+      <texPath>Things/RawFishs/Anchovies</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <ingestible>
+      <specialThoughtAsIngredient>RF_AteRawSeaFood</specialThoughtAsIngredient>
+    </ingestible>
+    <statBases>
+      <Nutrition>1</Nutrition>
+      <Mass>0.5</Mass>
+      <MarketValue>30</MarketValue>
+    </statBases>
+    <thingCategories>
+      <li>CorpsesFish</li>
+    </thingCategories>
+    <butcherProducts>
+      <RawFishMeat>20</RawFishMeat>
+    </butcherProducts>
+    <socialPropernessMatters>true</socialPropernessMatters>
+  </ThingDef>
+  <ThingDef ParentName="RBB_FishBase">
+    <defName>RF_Sardines</defName>
+    <label>sardines</label>
+    <description>Raw sardines. Sardines are saltwater fish that act in groups. The total length of adult fish is about 10-30cm. Needs to be prepare before it can be eaten.</description>
+    <graphicData>
+      <texPath>Things/RawFishs/Sardines</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <ingestible>
+      <specialThoughtAsIngredient>RF_AteRawSeaFood</specialThoughtAsIngredient>
+    </ingestible>
+    <statBases>
+      <Nutrition>1</Nutrition>
+      <Mass>0.5</Mass>
+      <MarketValue>30</MarketValue>
+    </statBases>
+    <thingCategories>
+      <li>CorpsesFish</li>
+    </thingCategories>
+    <butcherProducts>
+      <RawFishMeat>20</RawFishMeat>
+    </butcherProducts>
+    <socialPropernessMatters>true</socialPropernessMatters>
+  </ThingDef>
+</Defs>

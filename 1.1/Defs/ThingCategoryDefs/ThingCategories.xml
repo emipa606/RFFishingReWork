@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingCategoryDef>
+    <defName>CorpsesFish</defName>
+    <label>raw fish</label>
+    <parent>CorpsesAnimal</parent>
+  </ThingCategoryDef>
+  <ThingCategoryDef>
+    <defName>RF_RawSeafood</defName>
+    <label>seafood</label>
+    <parent>FoodRaw</parent>
+    <iconPath>RFF_Icons/RawFishMeat</iconPath>
+  </ThingCategoryDef>
+</Defs>

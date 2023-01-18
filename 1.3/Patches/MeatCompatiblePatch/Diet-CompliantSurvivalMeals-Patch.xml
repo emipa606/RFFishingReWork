@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Diet-Compliant Survival Meals</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/RecipeDef[defName = "SmartAndBrave_CookMealSurvival_Meat" or 
+									   defName = "SmartAndBrave_CookMealSurvivalBulk_Meat"]/ingredients/li[1]/filter/categories</xpath>
+          <value>
+            <li>RF_RawSeafood</li>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

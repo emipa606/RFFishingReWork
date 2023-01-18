@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/RecipeDef[defName = "CookMealFine" or
+									defName = "CookMealFineBulk" or									
+									defName = "CookMealLavish" or
+									defName = "CookMealLavishBulk" or
+									defName = "CookMealSurvival" or
+									defName = "CookMealSurvivalBulk" or
+									defName = "Make_Kibble" or
+									defName = "Make_Pemmican" or
+									defName = "Make_PemmicanBulk"]/ingredients/li[1]/filter/categories</xpath>
+        <value>
+          <li>RF_RawSeafood</li>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+  <!-- patch 1.3 -->
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationTest">
+        <xpath>/Defs/RecipeDef[defName = "CookMealFine_Veg"]</xpath>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/RecipeDef[defName = "CookMealFine_Veg" or
+										defName = "CookMealFineBulk_Veg" or 
+										defName = "CookMealLavish_Veg" or 
+										defName = "CookMealLavishBulk_Veg"]/fixedIngredientFilter/disallowedCategories</xpath>
+        <value>
+          <li>RF_RawSeafood</li>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/RecipeDef[defName = "CookMealFine_Meat" or
+									defName = "CookMealFineBulk_Meat" or
+									defName = "CookMealLavish_Meat" or									
+									defName = "CookMealLavishBulk_Meat"]/ingredients/li/filter/categories</xpath>
+        <value>
+          <li>RF_RawSeafood</li>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+</Patch>

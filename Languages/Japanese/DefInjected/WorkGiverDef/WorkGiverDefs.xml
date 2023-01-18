@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <WorkGiver_CatchFish.label>釣りをする</WorkGiver_CatchFish.label>
+  <WorkGiver_CatchFish.verb>釣り</WorkGiver_CatchFish.verb>
+  <WorkGiver_CatchFish.gerund>で釣りをする</WorkGiver_CatchFish.gerund>
+  <WorkGiver_IceFish.label>氷上釣りをする</WorkGiver_IceFish.label>
+  <WorkGiver_IceFish.verb>氷上釣り</WorkGiver_IceFish.verb>
+  <WorkGiver_IceFish.gerund>で釣りをする</WorkGiver_IceFish.gerund>
+</LanguageData>

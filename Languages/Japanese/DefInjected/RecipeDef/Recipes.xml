@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CookMealGrilledFish.label>魚を焼く</CookMealGrilledFish.label>
+  <CookMealGrilledFish.description>小魚を丸焼きにします。</CookMealGrilledFish.description>
+  <CookMealGrilledFish.jobString>魚を焼いている</CookMealGrilledFish.jobString>
+  <CookMealGrilledFishBulk.label>魚を4つ焼く</CookMealGrilledFishBulk.label>
+  <CookMealGrilledFishBulk.description>小魚を一度に4つ丸焼きにします。</CookMealGrilledFishBulk.description>
+  <CookMealGrilledFishBulk.jobString>魚を焼いている</CookMealGrilledFishBulk.jobString>
+  <MakeCucumberMed.label>ナマコの身から薬草を作る</MakeCucumberMed.label>
+  <MakeCucumberMed.description>ナマコの身から薬草を作成します。</MakeCucumberMed.description>
+  <MakeCucumberMed.jobString>ナマコの身から薬草を作成中</MakeCucumberMed.jobString>
+  <RF_DeepFryFish.label>魚のフライ x40</RF_DeepFryFish.label>
+  <RF_DeepFryFish.description>魚介類の肉を揚げます。揚げ物はとてもおいしいですが、健康には良くありません. 通常の大きさの魚を揚げるのがちょうどいいでしょう. 他の魚を揚げる場合、栄養が無駄になるかもしれません.</RF_DeepFryFish.description>
+  <RF_DeepFryFish.jobString>魚のフライを調理中</RF_DeepFryFish.jobString>
+  <RF_CanSeafood.label>魚介の缶詰 x20</RF_CanSeafood.label>
+  <RF_CanSeafood.description>生の魚介類の肉をスチール缶に密封します. 缶詰の賞味期限はほぼ無限です.</RF_CanSeafood.description>
+  <RF_CanSeafood.jobString>魚介の缶詰を製作中</RF_CanSeafood.jobString>
+</LanguageData>

@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Water Freezes</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationTest">
+          <xpath>Defs/TerrainDef[defName = "WF_LakeIce"]</xpath>
+        </li>
+        <li Class="PatchOperationTest">
+          <xpath>Defs/ThingDef[defName = "RBB_IceFishingSpot"]</xpath>
+          <success>Invert</success>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs</xpath>
+          <value>
+            <ThingDef>
+              <defName>RBB_IceFishingSpot</defName>
+            </ThingDef>
+            <WorkGiverDef>
+              <defName>WorkGiver_IceFish</defName>
+            </WorkGiverDef>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Water Freezes</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName = "RBB_IceFishingSpot"]</xpath>
+          <value>
+            <label>ice fishing spot</label>
+            <description>A spot from which pawns can catch fish through ice.</description>
+            <category>Building</category>
+            <thingClass>RBB_Code.Building_FishingSpot</thingClass>
+            <graphicData>
+              <texPath>Things/Buildings/IceFishingSpot2</texPath>
+              <graphicClass>Graphic_Single</graphicClass>
+              <drawSize>(1,1)</drawSize>
+            </graphicData>
+            <tickerType>Rare</tickerType>
+            <altitudeLayer>FloorEmplacement</altitudeLayer>
+            <statBases>
+              <WorkToBuild>250</WorkToBuild>
+              <SellPriceFactor>0.70</SellPriceFactor>
+            </statBases>
+            <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+            <selectable>true</selectable>
+            <drawerType>MapMeshAndRealTime</drawerType>
+            <repairEffect>Repair</repairEffect>
+            <scatterableOnMapGen>false</scatterableOnMapGen>
+            <useHitPoints>False</useHitPoints>
+            <size>(1,1)</size>
+            <designationCategory>Production</designationCategory>
+            <passability>Standable</passability>
+            <hasInteractionCell>True</hasInteractionCell>
+            <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+            <surfaceType>Item</surfaceType>
+            <comps>
+              <li Class="CompProperties_Forbiddable" />
+            </comps>
+            <building>
+              <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+              <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+            </building>
+            <terrainAffordanceNeeded>IceFishable</terrainAffordanceNeeded>
+            <placeWorkers>
+              <li>RBB_Code.PlaceWorker_IceFishingSpot</li>
+            </placeWorkers>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/WorkGiverDef[defName = "WorkGiver_IceFish"]</xpath>
+          <value>
+            <label>catch fish</label>
+            <giverClass>RBB_Code.WorkGiver_IceFish</giverClass>
+            <workType>Fishing</workType>
+            <fixedBillGiverDefs>
+              <li>RBB_IceFishingSpot</li>
+            </fixedBillGiverDefs>
+            <verb>fish</verb>
+            <gerund>fishing</gerund>
+            <requiredCapacities>
+              <li>Manipulation</li>
+            </requiredCapacities>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

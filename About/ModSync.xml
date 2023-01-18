@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModSyncNinjaData>
+  <ID>c4eda8f2-bbcb-42b2-b060-40ba2b12a928</ID>
+  <ModName>[RF] Fishing-ReWork (Continued)</ModName>
+  <Version>1.4.0</Version>
+  <SaveBreaking>False</SaveBreaking>
+  <Host name="Github">
+    <Owner>emipa606</Owner>
+    <Project>RFFishingReWork</Project>
+    <AboutDir>About</AboutDir>
+    <DownloadFrom>ModSyncMainPage</DownloadFrom>
+    <Branch>master</Branch>
+  </Host>
+</ModSyncNinjaData>
+
+
+
+

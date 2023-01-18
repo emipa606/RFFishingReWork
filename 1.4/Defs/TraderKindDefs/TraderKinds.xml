@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <TraderKindDef>
+    <defName>RF_Visitor_Fishmonger</defName>
+    <label>angler</label>
+    <commonality>0.5</commonality>
+    <stockGenerators>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>Silver</thingDef>
+        <countRange>50~500</countRange>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>Pemmican</thingDef>
+        <countRange>40~80</countRange>
+      </li>
+      <!-- Resources -->
+      <li Class="StockGenerator_Category">
+        <categoryDef>CorpsesFish</categoryDef>
+        <thingDefCountRange>2~6</thingDefCountRange>
+        <countRange>-1~8</countRange>
+        <totalPriceRange>10~450</totalPriceRange>
+      </li>
+      <li Class="StockGenerator_BuyExpensiveSimple" />
+    </stockGenerators>
+  </TraderKindDef>
+  <TraderKindDef>
+    <defName>RF_Caravan_Fishmonger</defName>
+    <label>fishmonger</label>
+    <commonality>0.25</commonality>
+    <stockGenerators>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>Silver</thingDef>
+        <countRange>750~1200</countRange>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>WoodLog</thingDef>
+        <countRange>50~300</countRange>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>Cloth</thingDef>
+        <countRange>50~300</countRange>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>Pemmican</thingDef>
+        <countRange>200~250</countRange>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>MedicineHerbal</thingDef>
+        <countRange>0~10</countRange>
+      </li>
+      <!-- Resources -->
+      <li Class="StockGenerator_Category">
+        <categoryDef>CorpsesFish</categoryDef>
+        <thingDefCountRange>2~10</thingDefCountRange>
+        <countRange>-1~12</countRange>
+        <totalPriceRange>80~600</totalPriceRange>
+      </li>
+      <li Class="StockGenerator_BuyExpensiveSimple" />
+      <li Class="StockGenerator_BuyTradeTag">
+        <tag>Art</tag>
+      </li>
+      <li Class="StockGenerator_BuyTradeTag">
+        <tag>MusicalInstrument</tag>
+      </li>
+    </stockGenerators>
+  </TraderKindDef>
+</Defs>

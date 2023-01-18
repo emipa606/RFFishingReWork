@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <RBB_FishingSpot.label>釣り場</RBB_FishingSpot.label>
+  <RBB_FishingSpot.description>入植者が落ち着いて魚釣りを楽しめる場所. 水の横にある橋や桟橋の上に設置します.</RBB_FishingSpot.description>
+  <Blueprint_RBB_FishingSpot.label>釣り場(設計)</Blueprint_RBB_FishingSpot.label>
+  <Frame_RBB_FishingSpot.label>釣り場(施工)</Frame_RBB_FishingSpot.label>
+  <Frame_RBB_FishingSpot.description>入植者が落ち着いて魚釣りを楽しめる場所. 水の横にある橋や桟橋の上に設置します.</Frame_RBB_FishingSpot.description>
+  <ShellfishTrap.label>カニ籠</ShellfishTrap.label>
+  <ShellfishTrap.description>カニ（ロブスター,カニ,ザリガニなど）を捕まえるための罠. エスカルゴ,エビ,小さな魚も捕まえることがあります.</ShellfishTrap.description>
+  <Blueprint_ShellfishTrap.label>カニ籠(設計)</Blueprint_ShellfishTrap.label>
+  <Frame_ShellfishTrap.label>カニ籠(施工)</Frame_ShellfishTrap.label>
+  <Frame_ShellfishTrap.description>カニ（ロブスター,カニ,ザリガニなど）を捕まえるための罠. エスカルゴ,エビ,小さな魚も捕まえることがあります.</Frame_ShellfishTrap.description>
+  <RF_SushiCounter.label>寿司カウンター</RF_SushiCounter.label>
+  <RF_SushiCounter.description>にぎり寿司を作るための調理台. 熟練した料理人だけがそこに立つことを許されています.</RF_SushiCounter.description>
+  <Blueprint_RF_SushiCounter.label>寿司カウンター(設計)</Blueprint_RF_SushiCounter.label>
+  <Frame_RF_SushiCounter.label>寿司カウンター(施工)</Frame_RF_SushiCounter.label>
+  <Frame_RF_SushiCounter.description>にぎり寿司を作るための調理台. 熟練した料理人だけがそこに立つことを許されています.</Frame_RF_SushiCounter.description>
+  <RBB_IceFishingSpot.label>氷上釣り場</RBB_IceFishingSpot.label>
+  <RBB_IceFishingSpot.description>入植者が氷の上で魚釣りを楽しめる場所. 凍った水の上にのみ設置できます.</RBB_IceFishingSpot.description>
+  <Blueprint_RBB_IceFishingSpot.label>氷上釣り場(設計)</Blueprint_RBB_IceFishingSpot.label>
+  <Frame_RBB_IceFishingSpot.label>氷上釣り場(施工)</Frame_RBB_IceFishingSpot.label>
+  <Frame_RBB_IceFishingSpot.description>入植者が氷の上で魚釣りを楽しめる場所. 凍った水の上にのみ設置できます.</Frame_RBB_IceFishingSpot.description>
+</LanguageData>

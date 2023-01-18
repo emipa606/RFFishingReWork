@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Better Survival Meals (Continued)</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/RecipeDef[defName = "CookMealSurvivalFine" or 
+									defName = "CookMealSurvivalLavish"or 
+									defName = "CookMealSurvivalFineBulk" or 
+									defName = "CookMealSurvivalLavishBulk"]/ingredients/li[1]/filter/categories</xpath>
+          <value>
+            <li>RF_RawSeafood</li>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Better Survival Meals</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/RecipeDef[defName = "CookMRE" or 
+									defName = "CookMREBulk"or 
+									defName = "CookMealSurvivalFine"or 
+									defName = "CookMealSurvivalLavish"or 
+									defName = "CookMealSurvivalFineBulk" or 
+									defName = "CookMealSurvivalLavishBulk"]/ingredients/li[1]/filter/categories</xpath>
+          <value>
+            <li>RF_RawSeafood</li>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

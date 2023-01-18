@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Cooking Expanded</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <!-- Deep Fried Fish -->
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs</xpath>
+          <value>
+            <RecipeDef>
+              <defName>RF_DeepFryFish</defName>
+              <label>deep fry fish x40</label>
+              <description>Deep fry fish. Deep fried food is very tasty, but not very good for your health.  It is just right to fry a fish of normal size. When frying other fish, nutrition may be wasted.</description>
+              <jobString>Deep frying fish.</jobString>
+              <workSpeedStat>CookSpeed</workSpeedStat>
+              <effectWorking>Cook</effectWorking>
+              <soundWorking>Recipe_CookMeal</soundWorking>
+              <allowMixingIngredients>true</allowMixingIngredients>
+              <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+              <recipeUsers>
+                <li>VCE_DeepFrier</li>
+              </recipeUsers>
+              <ingredients>
+                <li>
+                  <filter>
+                    <thingDefs>
+                      <li>RF_Fish</li>
+                      <li>RF_FishB</li>
+                      <li>RF_Arapaima</li>
+                      <li>RF_Piranha</li>
+                      <li>RF_Sturgeon</li>
+                      <li>RF_SturgeonCaviar</li>
+                      <li>RF_Bass</li>
+                      <li>RF_Catfish</li>
+                      <li>RF_Pufferfish</li>
+                      <li>RF_Clownfish</li>
+                      <li>RF_Anchovies</li>
+                      <li>RF_Sardines</li>
+                    </thingDefs>
+                  </filter>
+                  <count>2.0</count>
+                </li>
+              </ingredients>
+              <fixedIngredientFilter>
+                <thingDefs>
+                  <li>RF_Fish</li>
+                  <li>RF_FishB</li>
+                  <li>RF_Arapaima</li>
+                  <li>RF_Piranha</li>
+                  <li>RF_Sturgeon</li>
+                  <li>RF_SturgeonCaviar</li>
+                  <li>RF_Bass</li>
+                  <li>RF_Catfish</li>
+                  <li>RF_Pufferfish</li>
+                  <li>RF_Clownfish</li>
+                  <li>RF_Anchovies</li>
+                  <li>RF_Sardines</li>
+                </thingDefs>
+              </fixedIngredientFilter>
+              <defaultIngredientFilter>
+                <thingDefs>
+                  <li>RF_Fish</li>
+                </thingDefs>
+              </defaultIngredientFilter>
+              <products>
+                <VCE_DeepFriedFish>40</VCE_DeepFriedFish>
+              </products>
+            </RecipeDef>
+          </value>
+        </li>
+        <!-- Canned Seafood -->
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs</xpath>
+          <value>
+            <ThingDef ParentName="MealBase">
+              <defName>RF_CannedSeafood</defName>
+              <label>canned seafood</label>
+              <description>Fish vacuum sealed and secured in a steel can effectively extending shelf life indefinitely. While edible cold right out of the can it's far more nourishing mixed into a meal and heated. Consuming too many canned goods might cause an increase in blood pressure.</description>
+              <graphicData>
+                <texPath>Things/Items/Cans/RF_CannedSeafood</texPath>
+                <graphicClass>Graphic_StackCount</graphicClass>
+              </graphicData>
+              <tradeability>Sellable</tradeability>
+              <stackLimit>75</stackLimit>
+              <rotatable>false</rotatable>
+              <statBases>
+                <MarketValue>2.5</MarketValue>
+                <WorkToMake>400</WorkToMake>
+                <Nutrition>0.04</Nutrition>
+              </statBases>
+              <thingCategories>
+                <li>RF_RawSeafood</li>
+              </thingCategories>
+              <ingestible>
+                <preferability>MealAwful</preferability>
+                <ingestEffect>EatMeat</ingestEffect>
+                <ingestSound>Meal_Eat</ingestSound>
+                <maxNumToIngestAtOnce>5</maxNumToIngestAtOnce>
+                <tasteThought>VCE_ConsumedCannedGoods</tasteThought>
+                <specialThoughtAsIngredient>VCE_ConsumedCannedGoods</specialThoughtAsIngredient>
+              </ingestible>
+            </ThingDef>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs</xpath>
+          <value>
+            <RecipeDef>
+              <defName>RF_CanSeafood</defName>
+              <label>can fish x20</label>
+              <description>Safely store seafood in a steel can. Canning food extends its shelf life almost indefinitely.</description>
+              <jobString>Canning fish.</jobString>
+              <workSpeedStat>CookSpeed</workSpeedStat>
+              <effectWorking>Cook</effectWorking>
+              <soundWorking>Recipe_CookMeal</soundWorking>
+              <allowMixingIngredients>true</allowMixingIngredients>
+              <ingredientValueGetterClass>VanillaCookingExpanded.IngredientValueGetter_NutritionWithExtraIngredient</ingredientValueGetterClass>
+              <recipeUsers>
+                <li>VCE_CanningMachine</li>
+              </recipeUsers>
+              <ingredients>
+                <li>
+                  <filter>
+                    <categories>
+                      <li>RF_RawSeafood</li>
+                    </categories>
+                  </filter>
+                  <count>1</count>
+                </li>
+                <li>
+                  <filter>
+                    <thingDefs>
+                      <li>Steel</li>
+                    </thingDefs>
+                  </filter>
+                  <count>1</count>
+                </li>
+              </ingredients>
+              <fixedIngredientFilter>
+                <categories>
+                  <li>RF_RawSeafood</li>
+                </categories>
+              </fixedIngredientFilter>
+              <defaultIngredientFilter>
+                <categories>
+                  <li>RF_RawSeafood</li>
+                </categories>
+                <disallowedThingDefs>
+                  <li>Caviar</li>
+                  <li>SalmonRoe</li>
+                </disallowedThingDefs>
+              </defaultIngredientFilter>
+              <products>
+                <RF_CannedSeafood>20</RF_CannedSeafood>
+              </products>
+            </RecipeDef>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThoughtDef>
+    <defName>RF_AteCaviar</defName>
+    <durationDays>0.5</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>ate caviar</label>
+        <description>I ate some caviar. Hmm, luxury!</description>
+        <baseMoodEffect>6</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>RF_AteRawCrabMeat</defName>
+    <durationDays>0.5</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>ate crab meat</label>
+        <description>I ate raw crab meat. Decent deliciousness.</description>
+        <baseMoodEffect>1</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>RF_AteSalmonRoe</defName>
+    <durationDays>0.5</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>ate salmon roe</label>
+        <description>I ate salmon roe. Surprisingly delicious!</description>
+        <baseMoodEffect>2</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>RF_AteRawSeaFood</defName>
+    <durationDays>1</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>tasted the taste of the sea</label>
+        <description>I tasted fresh seafood. I feel the smell of the sea!</description>
+        <baseMoodEffect>3</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+</Defs>
