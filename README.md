@@ -162,3 +162,4 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=2288125657]![Image](https
 -  If you have the solution for a problem, please post it to the GitHub repository.
 
 
+https://steamcommunity.com/sharedfiles/filedetails/changelog/2920098766]Last updated 2023-02-08
