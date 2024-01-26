@@ -1,5 +1,8 @@
 # Changelog for RFFishingReWork
 
+1.4.2 - Fishing should now not be done by guests that cannot do any work
+
+
 1.4.1 - Added compatibility with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2542432157]Erin's Japanese Cuisine[/url]
 
 
