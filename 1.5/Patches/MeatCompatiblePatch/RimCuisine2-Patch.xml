@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/RecipeDef[defName = "CookThinPottage" or defName = "RC2_CookThickPottage"]</xpath>
+    <success>Always</success>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/RecipeDef[defName = "CookThinPottage" or defName = "RC2_CookThickPottage"]/ingredients/li[1]/filter/categories</xpath>
+      <value>
+        <li>RF_RawSeafood</li>
+      </value>
+    </match>
+  </Operation>
+</Patch>

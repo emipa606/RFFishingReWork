@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/RecipeDef[defName = "EJC_CookTempura"]</xpath>
+    <success>Always</success>
+    <match Class="PatchOperationInsert">
+      <xpath>/Defs/RecipeDef[@ParentName = "EJC_CookSimpleMealBase" or @ParentName = "EJC_CookSimpleMealBulkBase"]/ingredients/li/filter/categories/li[text()="MeatRaw"]</xpath>
+      <value>
+        <li>RF_RawSeafood</li>
+      </value>
+    </match>
+  </Operation>
+</Patch>

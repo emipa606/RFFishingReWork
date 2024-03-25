@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- FOOD -->
+  <ThingDef Name="RBB_MealBase" Abstract="True" ParentName="MealBase">
+    <statBases>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>4</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <tradeability>Buyable</tradeability>
+  </ThingDef>
+  <ThingDef ParentName="RBB_MealBase">
+    <defName>GrilledTinyFish</defName>
+    <label>grilled fish</label>
+    <description>A simple grilled from tiny fish. Tastes bland, but not offensive. It lasts a little time without refrigeration. Great for traveling or suvival.</description>
+    <graphicData>
+      <texPath>Things/Meals/GrilledFish</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <Nutrition>0.8</Nutrition>
+      <DeteriorationRate>3.5</DeteriorationRate>
+      <Mass>0.08</Mass>
+      <MarketValue>10</MarketValue>
+      <WorkToMake>300</WorkToMake>
+    </statBases>
+    <ingestible>
+      <preferability>MealSimple</preferability>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+    </ingestible>
+    <comps Inherit="false">
+      <li Class="CompProperties_Forbiddable" />
+      <li Class="CompProperties_Ingredients" />
+      <li Class="CompProperties_FoodPoisonable" />
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>8</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+  </ThingDef>
+</Defs>

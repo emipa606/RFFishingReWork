@@ -23,7 +23,7 @@ public class JobDriver_CatchFish : JobDriver
         AddEndCondition(delegate
         {
             var thing2 = pawn.jobs.curJob.GetTarget(fishingSpotIndex).Thing;
-            return !(thing2 is Building) || thing2.Spawned ? JobCondition.Ongoing : JobCondition.Incompletable;
+            return thing2 is not Building || thing2.Spawned ? JobCondition.Ongoing : JobCondition.Incompletable;
         });
         this.FailOnBurningImmobile(fishingSpotIndex);
         rotateToFace = TargetIndex.B;

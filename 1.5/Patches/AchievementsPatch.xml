@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/MainButtonDef[defName="Achievements"]</xpath>
+    <success>Always</success>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs</xpath>
+          <value>
+            <AchievementsExpanded.AchievementTabDef>
+              <defName>Mlie_Continued</defName>
+              <label>Continued Mods</label>
+            </AchievementsExpanded.AchievementTabDef>
+          </value>
+        </li>
+        <li Class="PatchOperationConditional">
+          <success>Always</success>
+          <xpath>/Defs/AchievementsExpanded.AchievementDef[@Name="Mlie_AchievementParent"]</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs</xpath>
+            <value>
+              <AchievementsExpanded.AchievementDef Name="Mlie_AchievementParent" Abstract="true">
+                <bgtexPath>Achievements/AchievmentsBG</bgtexPath>
+                <tab>Mlie_Continued</tab>
+              </AchievementsExpanded.AchievementDef>
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs</xpath>
+          <value>
+            <AchievementsExpanded.AchievementDef ParentName="Mlie_AchievementParent">
+              <defName>RF_AchivementTinyFish</defName>
+              <label>Grilled well</label>
+              <description>Cook a grilled tiny fish.</description>
+              <tracker Class="AchievementsExpanded.ItemCraftTracker">
+                <def>GrilledTinyFish</def>
+                <count>1</count>
+              </tracker>
+              <texPath>Achievements/RF_AchiveGrilledFish</texPath>
+              <points>5</points>
+            </AchievementsExpanded.AchievementDef>
+            <AchievementsExpanded.AchievementDef ParentName="Mlie_AchievementParent">
+              <defName>RF_AchievementPufferfish</defName>
+              <label>Not afraid of poisonable</label>
+              <description>Eat a raw pufferfish</description>
+              <tracker Class="AchievementsExpanded.HediffTracker">
+                <def>RF_AteRawPufferfish</def>
+                <count>1</count>
+              </tracker>
+              <texPath>Achievements/RF_AchieveEatPufferfish</texPath>
+              <points>10</points>
+            </AchievementsExpanded.AchievementDef>
+            <AchievementsExpanded.AchievementDef ParentName="Mlie_AchievementParent">
+              <defName>RF_AchievementSquidLeatherShirt</defName>
+              <label>It's cool?</label>
+              <description>Make a squid leather T-shirt</description>
+              <tracker Class="AchievementsExpanded.ItemCraftTracker">
+                <def>Apparel_BasicShirt</def>
+                <madeFrom>SquidLeather</madeFrom>
+                <count>1</count>
+              </tracker>
+              <texPath>Achievements/RF_AchiveSquidLeatherShirt</texPath>
+              <points>10</points>
+            </AchievementsExpanded.AchievementDef>
+            <AchievementsExpanded.AchievementDef ParentName="Mlie_AchievementParent">
+              <defName>RF_AchievementEelLeatherShirt</defName>
+              <label>Unagi</label>
+              <description>Make a eel leather T-shirt</description>
+              <tracker Class="AchievementsExpanded.ItemCraftTracker">
+                <def>Apparel_BasicShirt</def>
+                <madeFrom>EelLeather</madeFrom>
+                <count>1</count>
+              </tracker>
+              <texPath>Achievements/RF_AchiveEelLeatherShirt</texPath>
+              <points>10</points>
+            </AchievementsExpanded.AchievementDef>
+            <AchievementsExpanded.AchievementDef ParentName="Mlie_AchievementParent">
+              <defName>RF_AchievementAteCavir</defName>
+              <label>Get caviar!</label>
+              <description>Got a high-class delicacy caviar</description>
+              <tracker Class="AchievementsExpanded.ItemTracker">
+                <def>Caviar</def>
+                <count>1</count>
+              </tracker>
+              <texPath>Achievements/RF_AchiveCaviar</texPath>
+              <points>5</points>
+            </AchievementsExpanded.AchievementDef>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

@@ -6,7 +6,7 @@ namespace RBB_Code;
 [StaticConstructorOnStartup]
 internal static class RBB_Initializer
 {
-    public static bool iceFishing;
+    public static readonly bool iceFishing;
 
     static RBB_Initializer()
     {

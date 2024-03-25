@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- grilled tiny fish  -->
+  <RecipeDef>
+    <defName>CookMealGrilledFish</defName>
+    <label>grill fish</label>
+    <description>Grill tiny fish.</description>
+    <jobString>Grilling fish.</jobString>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RF_FishTiny</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <products>
+      <GrilledTinyFish>1</GrilledTinyFish>
+    </products>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RF_FishTiny</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <workSkill>Cooking</workSkill>
+    <recipeUsers>
+      <li>Campfire</li>
+      <li>ElectricStove</li>
+      <li>FueledStove</li>
+    </recipeUsers>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>CookMealGrilledFishBulk</defName>
+    <label>grill fish x4</label>
+    <description>Grill 4 tiny fish.</description>
+    <jobString>Grilling 4 fish.</jobString>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <workAmount>1000</workAmount>
+    <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RF_FishTiny</li>
+          </thingDefs>
+        </filter>
+        <count>4</count>
+      </li>
+    </ingredients>
+    <products>
+      <GrilledTinyFish>4</GrilledTinyFish>
+    </products>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RF_FishTiny</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <workSkill>Cooking</workSkill>
+    <recipeUsers>
+      <li>Campfire</li>
+      <li>ElectricStove</li>
+      <li>FueledStove</li>
+    </recipeUsers>
+  </RecipeDef>
+  <!-- meds from cucumbers -->
+  <RecipeDef>
+    <defName>MakeCucumberMed</defName>
+    <label>make herbal medicine from cucumber meats</label>
+    <description>Make herbal medicine from sea cucumber meats.</description>
+    <jobString>Making herbal medicine from cucumber meat.</jobString>
+    <workSpeedStat>DrugCookingSpeed</workSpeedStat>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>500</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SeaCucumberMeat</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <products>
+      <MedicineHerbal>1</MedicineHerbal>
+    </products>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SeaCucumberMeat</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <workSkill>Intellectual</workSkill>
+    <recipeUsers>
+      <li>CraftingSpot</li>
+      <li>DrugLab</li>
+    </recipeUsers>
+    <skillRequirements>
+      <Medicine>3</Medicine>
+      <Crafting>3</Crafting>
+    </skillRequirements>
+  </RecipeDef>
+</Defs>
