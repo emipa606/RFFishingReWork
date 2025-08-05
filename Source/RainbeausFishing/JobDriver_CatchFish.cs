@@ -7,8 +7,8 @@ namespace RBB_Code;
 
 public class JobDriver_CatchFish : JobDriver
 {
-    public readonly TargetIndex fishingSpotIndex = TargetIndex.A;
-    public Mote fishingRodMote;
+    private readonly TargetIndex fishingSpotIndex = TargetIndex.A;
+    private Mote fishingRodMote;
 
     public override bool TryMakePreToilReservations(bool errorOnFailed)
     {
@@ -28,7 +28,7 @@ public class JobDriver_CatchFish : JobDriver
         this.FailOnBurningImmobile(fishingSpotIndex);
         rotateToFace = TargetIndex.B;
         yield return Toils_Reserve.Reserve(fishingSpotIndex);
-        var fishingSkillLevel = pawn.skills.AverageOfRelevantSkillsFor(WorkTypeDefOf.Fishing);
+        var fishingSkillLevel = pawn.skills.AverageOfRelevantSkillsFor(DefDatabase<WorkTypeDef>.GetNamed("Fishing"));
         var num = fishingSkillLevel / 20f;
         var fishingDuration2 = (int)(2000f * (1.5f - num));
         fishingDuration2 = (int)(fishingDuration2 / (Controller.Settings.fishingEfficiency / 100f));
@@ -48,7 +48,7 @@ public class JobDriver_CatchFish : JobDriver
                     fishingRodMote.exactPosition = fishingSpot.fishingSpotCell.ToVector3Shifted();
                     fishingRodMote.Scale = 1f;
                     GenSpawn.Spawn(fishingRodMote, fishingSpot.fishingSpotCell, Map);
-                    var fishing = WorkTypeDefOf.Fishing;
+                    var fishing = DefDatabase<WorkTypeDef>.GetNamed("Fishing");
                     passion = pawn.skills.MaxPassionOfRelevantSkillsFor(fishing);
                     switch (passion)
                     {

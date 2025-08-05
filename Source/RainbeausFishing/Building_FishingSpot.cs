@@ -5,7 +5,7 @@ namespace RBB_Code;
 
 public class Building_FishingSpot : Building_WorkTable
 {
-    public IntVec3 fishingSpotCell = new IntVec3(0, 0, 0);
+    public IntVec3 fishingSpotCell = new(0, 0, 0);
 
     public int fishStock = 2;
 

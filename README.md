@@ -1,12 +1,13 @@
-# RFFishingReWork
+# [[RF] Fishing-ReWork (Continued)](https://steamcommunity.com/sharedfiles/filedetails/?id=2920098766)
 
 ![Image](https://i.imgur.com/buuPQel.png)
 
 Update of Si-Cafes mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=2383686530
 
-![Image](https://i.imgur.com/pufA0kM.png)
+- If Odyssey is loaded, only the shellfish trap is included, as fishing is already in the DLC
 
+![Image](https://i.imgur.com/pufA0kM.png)
 	
 ![Image](https://i.imgur.com/Z4GOv8H.png)
 
@@ -24,7 +25,7 @@ The feel for fishing is the same as the original mod.
 # Quote from the original mod description
 
 [quote=Rainbeau Flamebe]
-# [u]How Fishing Works:[/u]
+# <ins>How Fishing Works:</ins>
 
 Fishing is a custom work type, which relies on the "Animals" skill. Pawns with higher skill will fish faster, and have a higher chance of successfully catching something. (Additionally, fishing serves as a joy activity for pawns with a passion for the Animals skill.) Fishing spots can become depleted if overfished, and so will occasionally need to be allowed to "recharge."
 
@@ -71,7 +72,7 @@ Fishmongers sell corpses of fish. Fish meat is sell by regular traders in the sa
 
 
 
-- [u]**Cannot be used with the original fishing mod.**[/u]
+- <ins>**Cannot be used with the original fishing mod.**</ins>
 - There is basically no problem with other fishing mods. 
 However, the treatment of corpse of fish is different, so I think it will only cause confusion.
 
@@ -105,7 +106,7 @@ You will see a small error log at the start, but you can replace it without any 
 
 
 
-[u]**A patch is required to use seafood as a substitute for "raw meat"**[/u]
+<ins>**A patch is required to use seafood as a substitute for "raw meat"**</ins>
 Currently patched
 
 - Core
@@ -117,7 +118,7 @@ Currently patched
 
 # Credit
 
-[u]Most of the code for proper fishing in Rimworld comes from Rainbeau Flamebe's fishing mods.[/u]
+<ins>Most of the code for proper fishing in Rimworld comes from Rainbeau Flamebe's fishing mods.</ins>
 Without this, this mod wouldn't be possible. 
 
 # Language
@@ -147,8 +148,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=2592889993
 
 # Vanilla Achievements Expanded Compatibility
 
-https://steamcommunity.com/sharedfiles/filedetails/?id=2288125657]![Image](https://i.imgur.com/kNldlMg.png)
-
+[![Image](https://i.imgur.com/kNldlMg.png)](https://steamcommunity.com/sharedfiles/filedetails/?id=2288125657)
 	
 ![Image](https://i.imgur.com/PwoNOj4.png)
 
@@ -156,13 +156,12 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=2288125657]![Image](https
 
 -  See if the the error persists if you just have this mod and its requirements active.
 -  If not, try adding your other mods until it happens again.
--  Post your error-log using https://steamcommunity.com/workshop/filedetails/?id=818773962]HugsLib or the standalone https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404]Uploader and command Ctrl+F12
+-  Post your error-log using the [Log Uploader](https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404) or the standalone [Uploader](https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404) and command Ctrl+F12
 -  For best support, please use the Discord-channel for error-reporting.
 -  Do not report errors by making a discussion-thread, I get no notification of that.
 -  If you have the solution for a problem, please post it to the GitHub repository.
--  Use https://github.com/RimSort/RimSort/releases/latest]RimSort to sort your mods
+-  Use [RimSort](https://github.com/RimSort/RimSort/releases/latest) to sort your mods
 
+ 
 
-
-https://steamcommunity.com/sharedfiles/filedetails/changelog/2920098766]![Image](https://img.shields.io/github/v/release/emipa606/RFFishingReWork?label=latest%20version&style=plastic&color=9f1111&labelColor=black)
-
+[![Image](https://img.shields.io/github/v/release/emipa606/RFFishingReWork?label=latest%20version&style=plastic&color=9f1111&labelColor=black)](https://steamcommunity.com/sharedfiles/filedetails/changelog/2920098766) | tags:  seafood

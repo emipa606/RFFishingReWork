@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using RimWorld;
 using Verse;
 
@@ -6,7 +7,7 @@ namespace RBB_Code;
 
 public class Building_ShellfishTrap : Building
 {
-    private readonly Random rnd = new Random();
+    private readonly Random rnd = new();
 
     private int ticksToCatch;
 
@@ -68,29 +69,20 @@ public class Building_ShellfishTrap : Building
     {
         base.TickRare();
         var terrainDef = Map.terrainGrid.TerrainAt(Position);
-        if (terrainDef.defName.Contains("Water") || terrainDef.defName.Equals("Marsh"))
+        if (!terrainDef.defName.Contains("Water") && !terrainDef.defName.Equals("Marsh") &&
+            (!terrainDef.defName.Contains("Ice") || !(Rand.Value > 0.5f)))
         {
-            if (ticksToCatch > 0)
-            {
-                ticksToCatch--;
-            }
-
-            if (ticksToCatch <= 0)
-            {
-                PlaceProduct();
-            }
+            return;
         }
-        else if (terrainDef.defName.Contains("Ice") && Rand.Value > 0.5f)
-        {
-            if (ticksToCatch > 0)
-            {
-                ticksToCatch--;
-            }
 
-            if (ticksToCatch <= 0)
-            {
-                PlaceProduct();
-            }
+        if (ticksToCatch > 0)
+        {
+            ticksToCatch--;
+        }
+
+        if (ticksToCatch <= 0)
+        {
+            PlaceProduct();
         }
     }
 
@@ -134,86 +126,95 @@ public class Building_ShellfishTrap : Building
 
             if (value2 > num)
             {
-                if (Map.terrainGrid.TerrainAt(Position).defName.Contains("Ocean"))
+                if (tryToGetThingToSpawn(out var thingToCatch))
                 {
-                    if (value < 0.25)
-                    {
-                        var newThing = ThingMaker.MakeThing(ThingDef.Named("RF_Lobster"));
-                        GenSpawn.Spawn(newThing, Position, Map);
-                        text = "RBB.TrapLobster".Translate();
-                    }
-                    else if (value < 0.3)
-                    {
-                        var newThing2 = ThingMaker.MakeThing(ThingDef.Named("RF_Octopus"));
-                        GenSpawn.Spawn(newThing2, Position, Map);
-                        text = "RBB.TrapOctopus".Translate();
-                    }
-                    else if (value < 0.4)
-                    {
-                        var newThing3 = ThingMaker.MakeThing(ThingDef.Named("RF_Scallops"));
-                        GenSpawn.Spawn(newThing3, Position, Map);
-                        text = "RBB.TrapScallops".Translate();
-                    }
-                    else if (value < 0.5)
-                    {
-                        var newThing4 = ThingMaker.MakeThing(ThingDef.Named("RF_Crab"));
-                        GenSpawn.Spawn(newThing4, Position, Map);
-                        text = "RBB.TrapCrab".Translate();
-                    }
-                    else if (value < 0.6)
-                    {
-                        var newThing5 = ThingMaker.MakeThing(ThingDef.Named("RF_Mussel"));
-                        GenSpawn.Spawn(newThing5, Position, Map);
-                        text = "RBB.TrapMussel".Translate();
-                    }
-                    else if (value < 0.7)
-                    {
-                        var newThing6 = ThingMaker.MakeThing(ThingDef.Named("RF_Anchovies"));
-                        GenSpawn.Spawn(newThing6, Position, Map);
-                        text = "RBB.TrapAnchovies".Translate();
-                    }
-                    else if (value < 0.8)
-                    {
-                        var newThing7 = ThingMaker.MakeThing(ThingDef.Named("RF_Shrimp"));
-                        GenSpawn.Spawn(newThing7, Position, Map);
-                        text = "RBB.TrapShrimp".Translate();
-                    }
-                    else if (value < 0.9)
-                    {
-                        var newThing8 = ThingMaker.MakeThing(ThingDef.Named("RF_Clownfish"));
-                        GenSpawn.Spawn(newThing8, Position, Map);
-                        text = "RBB.TrapClownfish".Translate();
-                    }
-                    else
-                    {
-                        var newThing9 = ThingMaker.MakeThing(ThingDef.Named("RF_FishTiny"));
-                        GenSpawn.Spawn(newThing9, Position, Map);
-                        text = "RBB.TrapFish".Translate();
-                    }
-                }
-                else if (value < 0.4)
-                {
-                    var newThing10 = ThingMaker.MakeThing(ThingDef.Named("RF_Crayfish"));
-                    GenSpawn.Spawn(newThing10, Position, Map);
-                    text = "RBB.TrapCrayfish".Translate();
-                }
-                else if (value < 0.6)
-                {
-                    var newThing11 = ThingMaker.MakeThing(ThingDef.Named("RF_Crab"));
-                    GenSpawn.Spawn(newThing11, Position, Map);
-                    text = "RBB.TrapCrab".Translate();
-                }
-                else if (value < 0.8)
-                {
-                    var newThing12 = ThingMaker.MakeThing(ThingDef.Named("RF_Snail"));
-                    GenSpawn.Spawn(newThing12, Position, Map);
-                    text = "RBB.TrapSnail".Translate();
+                    var newThing = ThingMaker.MakeThing(thingToCatch);
+                    GenSpawn.Spawn(newThing, Position, Map);
+                    text = "RBB.TrapSomething".Translate(thingToCatch.label);
                 }
                 else
                 {
-                    var newThing13 = ThingMaker.MakeThing(ThingDef.Named("RF_FishTiny"));
-                    GenSpawn.Spawn(newThing13, Position, Map);
-                    text = "RBB.TrapFish".Translate();
+                    if (Map.terrainGrid.TerrainAt(Position).defName.Contains("Ocean"))
+                    {
+                        if (value < 0.25)
+                        {
+                            var newThing = ThingMaker.MakeThing(ThingDef.Named("RF_Lobster"));
+                            GenSpawn.Spawn(newThing, Position, Map);
+                            text = "RBB.TrapLobster".Translate();
+                        }
+                        else if (value < 0.3)
+                        {
+                            var newThing2 = ThingMaker.MakeThing(ThingDef.Named("RF_Octopus"));
+                            GenSpawn.Spawn(newThing2, Position, Map);
+                            text = "RBB.TrapOctopus".Translate();
+                        }
+                        else if (value < 0.4)
+                        {
+                            var newThing3 = ThingMaker.MakeThing(ThingDef.Named("RF_Scallops"));
+                            GenSpawn.Spawn(newThing3, Position, Map);
+                            text = "RBB.TrapScallops".Translate();
+                        }
+                        else if (value < 0.5)
+                        {
+                            var newThing4 = ThingMaker.MakeThing(ThingDef.Named("RF_Crab"));
+                            GenSpawn.Spawn(newThing4, Position, Map);
+                            text = "RBB.TrapCrab".Translate();
+                        }
+                        else if (value < 0.6)
+                        {
+                            var newThing5 = ThingMaker.MakeThing(ThingDef.Named("RF_Mussel"));
+                            GenSpawn.Spawn(newThing5, Position, Map);
+                            text = "RBB.TrapMussel".Translate();
+                        }
+                        else if (value < 0.7)
+                        {
+                            var newThing6 = ThingMaker.MakeThing(ThingDef.Named("RF_Anchovies"));
+                            GenSpawn.Spawn(newThing6, Position, Map);
+                            text = "RBB.TrapAnchovies".Translate();
+                        }
+                        else if (value < 0.8)
+                        {
+                            var newThing7 = ThingMaker.MakeThing(ThingDef.Named("RF_Shrimp"));
+                            GenSpawn.Spawn(newThing7, Position, Map);
+                            text = "RBB.TrapShrimp".Translate();
+                        }
+                        else if (value < 0.9)
+                        {
+                            var newThing8 = ThingMaker.MakeThing(ThingDef.Named("RF_Clownfish"));
+                            GenSpawn.Spawn(newThing8, Position, Map);
+                            text = "RBB.TrapClownfish".Translate();
+                        }
+                        else
+                        {
+                            var newThing9 = ThingMaker.MakeThing(ThingDef.Named("RF_FishTiny"));
+                            GenSpawn.Spawn(newThing9, Position, Map);
+                            text = "RBB.TrapFish".Translate();
+                        }
+                    }
+                    else if (value < 0.4)
+                    {
+                        var newThing10 = ThingMaker.MakeThing(ThingDef.Named("RF_Crayfish"));
+                        GenSpawn.Spawn(newThing10, Position, Map);
+                        text = "RBB.TrapCrayfish".Translate();
+                    }
+                    else if (value < 0.6)
+                    {
+                        var newThing11 = ThingMaker.MakeThing(ThingDef.Named("RF_Crab"));
+                        GenSpawn.Spawn(newThing11, Position, Map);
+                        text = "RBB.TrapCrab".Translate();
+                    }
+                    else if (value < 0.8)
+                    {
+                        var newThing12 = ThingMaker.MakeThing(ThingDef.Named("RF_Snail"));
+                        GenSpawn.Spawn(newThing12, Position, Map);
+                        text = "RBB.TrapSnail".Translate();
+                    }
+                    else
+                    {
+                        var newThing13 = ThingMaker.MakeThing(ThingDef.Named("RF_FishTiny"));
+                        GenSpawn.Spawn(newThing13, Position, Map);
+                        text = "RBB.TrapFish".Translate();
+                    }
                 }
             }
 
@@ -281,5 +282,49 @@ public class Building_ShellfishTrap : Building
                 break;
             }
         }
+    }
+
+    private bool tryToGetThingToSpawn(out ThingDef thingToCatch)
+    {
+        thingToCatch = null;
+        var tmpCatches = new List<Thing>();
+        tmpCatches.Clear();
+        if (!ModsConfig.OdysseyActive)
+        {
+            return false;
+        }
+
+        var waterBody = Position.GetWaterBody(Map);
+        if (waterBody == null || waterBody.waterBodyType == WaterBodyType.None)
+        {
+            return false;
+        }
+
+        if (!Rand.Chance(FishingUtility.PollutionToxfishChanceCurve.Evaluate(waterBody.PollutionPct)))
+        {
+            if (Map.Biome.fishTypes.rareCatchesSetMaker != null &&
+                (DebugSettings.alwaysRareCatches || Map.waterBodyTracker.lastRareCatchTick == 0 ||
+                 GenTicks.TicksGame - Map.waterBodyTracker.lastRareCatchTick > 300000) && Rand.Chance(0.01f))
+            {
+                tmpCatches.AddRange(Map.Biome.fishTypes.rareCatchesSetMaker.root.Generate());
+                if (tmpCatches.Any())
+                {
+                    thingToCatch = tmpCatches.RandomElement().def;
+                    return true;
+                }
+            }
+
+            if (Rand.Chance(0.05f) && waterBody.UncommonFish.TryRandomElement(out thingToCatch) ||
+                waterBody.CommonFishIncludingExtras.TryRandomElement(out thingToCatch) || !tmpCatches.Any())
+            {
+                return thingToCatch != null;
+            }
+
+            thingToCatch = tmpCatches.RandomElement().def;
+            return true;
+        }
+
+        thingToCatch = ThingDefOf.Fish_Toxfish;
+        return true;
     }
 }

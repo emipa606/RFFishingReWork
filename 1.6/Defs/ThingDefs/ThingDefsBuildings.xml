@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef>
+    <defName>ShellfishTrap</defName>
+    <label>shellfish trap</label>
+    <thingClass>RBB_Code.Building_ShellfishTrap</thingClass>
+    <description>A trap designed to catch shellfish (lobsters, crabs, crayfish and the like). It'll also sometimes catch snails, shrimp and small fish.</description>
+    <graphicData>
+      <texPath>Things/Buildings/ShellfishTrap</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <blockLight>false</blockLight>
+    <altitudeLayer>Building</altitudeLayer>
+    <rotatable>false</rotatable>
+    <statBases>
+      <WorkToBuild>250</WorkToBuild>
+      <Mass>5</Mass>
+    </statBases>
+    <costList>
+      <WoodLog>15</WoodLog>
+      <Steel>2</Steel>
+    </costList>
+    <constructEffect>ConstructWood</constructEffect>
+    <useHitPoints>true</useHitPoints>
+    <size>(1,1)</size>
+    <designationCategory>Production</designationCategory>
+    <passability>PassThroughOnly</passability>
+    <tickerType>Rare</tickerType>
+    <pathCost>60</pathCost>
+    <terrainAffordanceNeeded>ShallowWater</terrainAffordanceNeeded>
+    <placeWorkers>
+      <li>RBB_Code.PlaceWorker_ShellfishTrap</li>
+    </placeWorkers>
+    <category>Building</category>
+    <soundImpactDefault>BulletImpact_Wood</soundImpactDefault>
+    <selectable>true</selectable>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <repairEffect>Repair</repairEffect>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>Filth_RubbleBuilding</filthLeaving>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <building>
+      <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+    </building>
+    <thingCategories>
+      <li>BuildingsProduction</li>
+    </thingCategories>
+  </ThingDef>
+</Defs>

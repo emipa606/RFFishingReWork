@@ -1,0 +1,107 @@
+ManifestFileVersion: 0
+CRC: 2995128728
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 1323194755091d19ea0832e3eebb7181
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 2612ac43db082a73502ee80f2eceb73f
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 1323194755091d19ea0832e3eebb7181
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishs/Eel.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishs/Lobster.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishs/Salmon.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishs/Sardines.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishs/Tuna.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishMeats/RawPufferfishMeat/RawPufferMeat_b.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishs/Anchovies.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishMeats/RawTunaMeat/RawTunaMeat_a.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishMeats/RawEelMeat/RawEelMeat_b.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishs/Clownfish.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishMeats/RawJellyfishMeat/RawJellyfishMeat_a.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/Meals/GrilledFish/GrilledFish_b.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishs/Shrimp.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishs/RawFish.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishMeats/RawCrabMeat/RawCrabMeat_c.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Achievements/RF_AchiveCaviar.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/Buildings/ShellfishTrap.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishs/Octopus.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Achievements/RF_AchiveGrilledFish.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/Meals/GrilledFish/GrilledFish_c.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/RFF_Icons/RawFishMeat.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishs/Sturgeon.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/Buildings/FishingSpot.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/Meals/SmokedFishMeat/SmokedFishMeat_b.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/Mote/FishingRodEast.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishMeats/RawSalmonMeat/RawSalmonMeat_c.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishs/Scallops.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/Items/Cans/RF_CannedSeafood/RF_CannedSeafood_b.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishMeats/RawFishMeat/RawFishMeat_c.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishMeats/RawShrimpMeat/RawShrimpMeat_c.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishMeats/RawFishMeat/RawFishMeat_b.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishs/RawFishTiny.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishMeats/RawSquidMeat/RawSquidMeat_c.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/Buildings/IceFishingSpot2.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Achievements/RF_AchiveSquidLeatherShirt.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishMeats/RawPufferfishMeat/RawPufferMeat_c.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishMeats/RawPufferfishMeat/RawPufferMeat_a.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishs/Arapaima.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishs/Piranha.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/Mote/FishingRodWest.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishMeats/RawEelMeat/RawEelMeat_a.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishMeats/RawOctopusMeat/RawOctopusMeat_c.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Achievements/RF_AchieveEatPufferfish.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/Mote/FishingRodSouth.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/Meals/SmokedFishMeat/SmokedFishMeat_c.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishMeats/RawTunaMeat/RawTunaMeat_c.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishs/Catfish.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/Meals/GrilledFish/GrilledFish_a.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishMeats/Caviar.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishMeats/RawJellyfishMeat/RawJellyfishMeat_c.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishMeats/RawShellfishMeat/RawShellfishMeat_b.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishMeats/RawShellfishMeat/RawShellfishMeat_c.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishMeats/RawCucumberMeat/RawCucumberMeat_b.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishMeats/RawEelMeat/RawEelMeat_c.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishMeats/RawShrimpMeat/RawShrimpMeat_a.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/Items/Cans/RF_CannedSeafood/RF_CannedSeafood_c.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishMeats/RawJellyfishMeat/RawJellyfishMeat_b.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/Items/Cans/RF_CannedSeafood/RF_CannedSeafood_a.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishs/Pufferfish.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Achievements/RF_AchiveEelLeatherShirt.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishMeats/RawSalmonMeat/RawSalmonMeat_b.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishMeats/RawSquidMeat/RawSquidMeat_a.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Achievements/AchievmentsBG.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishMeats/RawCrabMeat/RawCrabMeat_b.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/Mote/FishingRodNorth.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishs/Snail.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishs/Crab.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/Meals/SmokedFishMeat/SmokedFishMeat_a.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishs/Seabream.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishMeats/RawCucumberMeat/RawCucumberMeat_a.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishs/Bass.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishs/Squid.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishMeats/RawCucumberMeat/RawCucumberMeat_c.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishMeats/RawCrabMeat/RawCrabMeat_a.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishMeats/RawOctopusMeat/RawOctopusMeat_a.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishMeats/SalmonRoe.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishMeats/RawFishMeat/RawFishMeat_a.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishs/Kingcrab.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishMeats/RawOctopusMeat/RawOctopusMeat_b.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishMeats/RawTunaMeat/RawTunaMeat_b.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishMeats/RawShrimpMeat/RawShrimpMeat_b.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishs/Mussel.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishMeats/RawSquidMeat/RawSquidMeat_b.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishs/Crayfish.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishMeats/RawShellfishMeat/RawShellfishMeat_a.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishMeats/RawSalmonMeat/RawSalmonMeat_a.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishs/Jellyfish.png
+- Assets/Data/Mlie.RFFishingReWork/Textures/Things/RawFishs/SeaCucumber.png
+Dependencies: []

@@ -2,5 +2,14 @@
   "Continued": true,
   "CanAdd": "0",
   "CanRemove": "2",
-  "PreviewVersion": "1.5"
+  "PreviewVersion": "1.6",
+  "LastXmlCleaning": "2025-08-05T20:55:45.141775+02:00",
+  "Patches": false,
+  "Defs": true,
+  "Assemblies": true,
+  "LinesOfCode": 104038,
+  "LinesOfXML": 1864,
+  "CodeBaseSize": 84,
+  "SocialImageSet": true,
+  "SearchTags": " seafood"
 }

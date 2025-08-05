@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
   <RBB.Fishing>Rainbeau's Fishing</RBB.Fishing>
   <RBB.NotOnFS>Cannot be placed over a fishing spot</RBB.NotOnFS>
@@ -39,6 +39,7 @@
   <RBB.Sardines> caught sardines.</RBB.Sardines>
   <RBB.Kingcrab> caught a king crab.</RBB.Kingcrab>
   <RBB.Crayfish> caught a crayfish.</RBB.Crayfish>
+  <RBB.TrapSomething>A fish-trap caught {0}!</RBB.TrapSomething>
   <RBB.TrapOctopus>A shellfish trap caught an octopus!</RBB.TrapOctopus>
   <RBB.TrapMussel>A shellfish trap caught mussels!</RBB.TrapMussel>
   <RBB.TrapClownfish>A shellfish trap caught a clownfish!</RBB.TrapClownfish>
