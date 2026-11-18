@@ -66,11 +66,22 @@ public class PlaceWorker_IceFishingSpot : PlaceWorker
         }
 
         var terrainDef = map.terrainGrid.TerrainAt(c);
-        AcceptanceReport result = !terrainDef.defName.Contains("Water") && terrainDef != TerrainDef.Named("Marsh")
-            ? true
-            : !terrainDef.defName.Contains("Bridge")
-                ? new AcceptanceReport("RBB.FishingSpot2".Translate())
-                : (AcceptanceReport)true;
+        AcceptanceReport result;
+        if (!terrainDef.defName.Contains("Water") && terrainDef != TerrainDef.Named("Marsh"))
+        {
+            result = true;
+        }
+        else
+        {
+            if (!terrainDef.defName.Contains("Bridge"))
+            {
+                result = new AcceptanceReport("RBB.FishingSpot2".Translate());
+            }
+            else
+            {
+                result = true;
+            }
+        }
 
         return result;
     }

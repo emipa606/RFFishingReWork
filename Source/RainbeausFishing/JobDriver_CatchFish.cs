@@ -40,10 +40,25 @@ public class JobDriver_CatchFish : JobDriver
             {
                 initAction = delegate
                 {
-                    var def = fishingSpot.Rotation == Rot4.North ? ThingDef.Named("Mote_FishingRodNorth") :
-                        fishingSpot.Rotation == Rot4.East ? ThingDef.Named("Mote_FishingRodEast") :
-                        !(fishingSpot.Rotation == Rot4.South) ? ThingDef.Named("Mote_FishingRodWest") :
-                        ThingDef.Named("Mote_FishingRodSouth");
+                    ThingDef def;
+                    if (fishingSpot.Rotation == Rot4.North)
+                    {
+                        def = ThingDef.Named("Mote_FishingRodNorth");
+                    }
+                    else
+                    {
+                        if (fishingSpot.Rotation == Rot4.East)
+                        {
+                            def = ThingDef.Named("Mote_FishingRodEast");
+                        }
+                        else
+                        {
+                            def = fishingSpot.Rotation != Rot4.South
+                                ? ThingDef.Named("Mote_FishingRodWest")
+                                : ThingDef.Named("Mote_FishingRodSouth");
+                        }
+                    }
+
                     fishingRodMote = (Mote)ThingMaker.MakeThing(def);
                     fishingRodMote.exactPosition = fishingSpot.fishingSpotCell.ToVector3Shifted();
                     fishingRodMote.Scale = 1f;
@@ -195,30 +210,48 @@ public class JobDriver_CatchFish : JobDriver
 
                             var value = Rand.Value;
                             var value2 = Rand.Value;
-                            thing = value < 0.75f
-                                ? !(value2 < 0.5f)
+                            if (value < 0.75f)
+                            {
+                                thing = !(value2 < 0.5f)
                                     ? GenSpawn.Spawn(ThingDefOf.Cloth, pawn.Position, Map)
-                                    : GenSpawn.Spawn(ThingDefOf.WoodLog, pawn.Position, Map)
-                                : value2 < 0.4f
-                                    ? GenSpawn.Spawn(ThingDefOf.WoodLog, pawn.Position, Map)
-                                    : value2 < 0.7f
-                                        ? GenSpawn.Spawn(ThingDefOf.Cloth, pawn.Position, Map)
-                                        : value2 < 0.8f
-                                            ? GenSpawn.Spawn(ThingDefOf.Steel, pawn.Position, Map)
-                                            : value2 < 0.85f
-                                                ? GenSpawn.Spawn(ThingDef.Named("SquidLeather"), pawn.Position, Map)
-                                                : value2 < 0.9f
-                                                    ? GenSpawn.Spawn(ThingDef.Named("Leather_Plain"), pawn.Position,
-                                                        Map)
-                                                    : value2 < 0.97f
-                                                        ? GenSpawn.Spawn(ThingDef.Named("EelLeather"), pawn.Position,
-                                                            Map)
-                                                        : !(value2 < 0.975f)
-                                                            ? GenSpawn.Spawn(ThingDef.Named("Synthread"), pawn.Position,
-                                                                Map)
-                                                            : GenSpawn.Spawn(ThingDef.Named("Leather_Human"),
-                                                                pawn.Position,
-                                                                Map);
+                                    : GenSpawn.Spawn(ThingDefOf.WoodLog, pawn.Position, Map);
+                            }
+                            else
+                            {
+                                switch (value2)
+                                {
+                                    case < 0.4f:
+                                        thing = GenSpawn.Spawn(ThingDefOf.WoodLog, pawn.Position, Map);
+                                        break;
+                                    case < 0.7f:
+                                        thing = GenSpawn.Spawn(ThingDefOf.Cloth, pawn.Position, Map);
+                                        break;
+                                    case < 0.8f:
+                                        thing = GenSpawn.Spawn(ThingDefOf.Steel, pawn.Position, Map);
+                                        break;
+                                    case < 0.85f:
+                                        thing = GenSpawn.Spawn(ThingDef.Named("SquidLeather"), pawn.Position,
+                                            Map);
+                                        break;
+                                    case < 0.9f:
+                                        thing = GenSpawn.Spawn(ThingDef.Named("Leather_Plain"),
+                                            pawn.Position,
+                                            Map);
+                                        break;
+                                    case < 0.97f:
+                                        thing = GenSpawn.Spawn(ThingDef.Named("EelLeather"),
+                                            pawn.Position,
+                                            Map);
+                                        break;
+                                    default:
+                                        thing = GenSpawn.Spawn(
+                                            !(value2 < 0.975f)
+                                                ? ThingDef.Named("Synthread")
+                                                : ThingDef.Named("Leather_Human"), pawn.Position, Map);
+                                        break;
+                                }
+                            }
+
                             if (Rand.Value < 0.75f)
                             {
                                 fishingSpot.fishStock--;
@@ -269,11 +302,16 @@ public class JobDriver_CatchFish : JobDriver
                                 }
                                 else if (!(value4 < 0.9f))
                                 {
-                                    thing = value4 < 0.96f
-                                        ? GenSpawn.Spawn(ThingDef.Named("Gun_ChargeRifle"), pawn.Position, Map)
-                                        : !(value4 < 0.98f)
+                                    if (value4 < 0.96f)
+                                    {
+                                        thing = GenSpawn.Spawn(ThingDef.Named("Gun_ChargeRifle"), pawn.Position, Map);
+                                    }
+                                    else
+                                    {
+                                        thing = !(value4 < 0.98f)
                                             ? GenSpawn.Spawn(ThingDef.Named("SimpleProstheticLeg"), pawn.Position, Map)
                                             : GenSpawn.Spawn(ThingDef.Named("SimpleProstheticArm"), pawn.Position, Map);
+                                    }
                                 }
                                 else
                                 {

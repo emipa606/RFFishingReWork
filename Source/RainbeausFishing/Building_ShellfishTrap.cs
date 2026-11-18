@@ -17,9 +17,9 @@ public class Building_ShellfishTrap : Building
         Scribe_Values.Look(ref ticksToCatch, "ticksToCatch");
     }
 
-    public override void SpawnSetup(Map currentGame, bool respawningAfterLoad)
+    public override void SpawnSetup(Map map, bool respawningAfterLoad)
     {
-        base.SpawnSetup(currentGame, respawningAfterLoad);
+        base.SpawnSetup(map, respawningAfterLoad);
         if (ticksToCatch > 0)
         {
             return;
@@ -28,8 +28,8 @@ public class Building_ShellfishTrap : Building
         var num = rnd.Next(24);
         var num2 = rnd.Next(24);
         ticksToCatch = (6 + num + num2) * 10;
-        if (currentGame.Biome.defName == "AridShrubland" || currentGame.Biome.defName.Contains("DesertArchi") ||
-            currentGame.Biome.defName.Contains("Boreal"))
+        if (map.Biome.defName == "AridShrubland" || map.Biome.defName.Contains("DesertArchi") ||
+            map.Biome.defName.Contains("Boreal"))
         {
             var num3 = rnd.Next(6);
             var num4 = rnd.Next(6);
@@ -41,8 +41,8 @@ public class Building_ShellfishTrap : Building
             var num6 = rnd.Next(9);
             ticksToCatch += (6 + num5 + num6) * 10;
         }
-        else if (currentGame.Biome.defName.Contains("ColdBog") || currentGame.Biome.defName == "Desert" ||
-                 currentGame.Biome.defName.Contains("Tundra"))
+        else if (map.Biome.defName.Contains("ColdBog") || map.Biome.defName == "Desert" ||
+                 map.Biome.defName.Contains("Tundra"))
         {
             var num7 = rnd.Next(12);
             var num8 = rnd.Next(12);
@@ -54,8 +54,8 @@ public class Building_ShellfishTrap : Building
             var num10 = rnd.Next(18);
             ticksToCatch += (6 + num9 + num10) * 10;
         }
-        else if (currentGame.Biome.defName == "IceSheet" || currentGame.Biome.defName == "SeaIce" ||
-                 currentGame.Biome.defName == "ExtremeDesert")
+        else if (map.Biome.defName == "IceSheet" || map.Biome.defName == "SeaIce" ||
+                 map.Biome.defName == "ExtremeDesert")
         {
             var num11 = rnd.Next(24);
             var num12 = rnd.Next(24);

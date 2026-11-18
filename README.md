@@ -1,15 +1,15 @@
 # [[RF] Fishing-ReWork (Continued)](https://steamcommunity.com/sharedfiles/filedetails/?id=2920098766)
 
-![Image](https://i.imgur.com/buuPQel.png)
+![Image](https://img.litet.net/logos/Info.png)
 
 Update of Si-Cafes mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=2383686530
 
 - If Odyssey is loaded, only the shellfish trap is included, as fishing is already in the DLC
 
-![Image](https://i.imgur.com/pufA0kM.png)
+![Image](https://img.litet.net/logos/Notice.png)
 	
-![Image](https://i.imgur.com/Z4GOv8H.png)
+![Image](https://img.litet.net/logos/OriginalDescription.png)
 
 # This mod is a rework of the Rainbeau's fishing mod.
 
@@ -148,15 +148,15 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=2592889993
 
 # Vanilla Achievements Expanded Compatibility
 
-[![Image](https://i.imgur.com/kNldlMg.png)](https://steamcommunity.com/sharedfiles/filedetails/?id=2288125657)
+[![Image](https://img.litet.net/kNldlMg.png)](https://steamcommunity.com/sharedfiles/filedetails/?id=2288125657)
 	
-![Image](https://i.imgur.com/PwoNOj4.png)
+![Image](https://img.litet.net/logos/ReportingIssues.png)
 
 
 
 -  See if the the error persists if you just have this mod and its requirements active.
 -  If not, try adding your other mods until it happens again.
--  Post your error-log using the [Log Uploader](https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404) or the standalone [Uploader](https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404) and command Ctrl+F12
+-  Always post your log using the [Log Uploader](https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404)
 -  For best support, please use the Discord-channel for error-reporting.
 -  Do not report errors by making a discussion-thread, I get no notification of that.
 -  If you have the solution for a problem, please post it to the GitHub repository.
@@ -164,4 +164,4 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=2592889993
 
  
 
-[![Image](https://img.shields.io/github/v/release/emipa606/RFFishingReWork?label=latest%20version&style=plastic&color=9f1111&labelColor=black)](https://steamcommunity.com/sharedfiles/filedetails/changelog/2920098766) | tags:  seafood
+[![Image](https://img.shields.io/github/v/release/emipa606/RFFishingReWork?label=latest%20version&style=plastic&color=9f1111&labelColor=black)](https://steamcommunity.com/sharedfiles/filedetails/changelog/2920098766) | seafood

@@ -70,8 +70,16 @@ public class PlaceWorker_FishingSpot : PlaceWorker
         }
 
         var terrainDef2 = map.terrainGrid.TerrainAt(c);
-        return !terrainDef2.defName.Contains("Water") && terrainDef2 != TerrainDef.Named("Marsh") ? true :
-            !terrainDef2.defName.Contains("Bridge") ? new AcceptanceReport("RBB.FishingSpot2".Translate()) :
-            (AcceptanceReport)true;
+        if (!terrainDef2.defName.Contains("Water") && terrainDef2 != TerrainDef.Named("Marsh"))
+        {
+            return true;
+        }
+
+        if (!terrainDef2.defName.Contains("Bridge"))
+        {
+            return new AcceptanceReport("RBB.FishingSpot2".Translate());
+        }
+
+        return true;
     }
 }

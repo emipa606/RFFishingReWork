@@ -5,13 +5,12 @@ namespace RBB_Code;
 
 public class Building_FishingSpot : Building_WorkTable
 {
-    public IntVec3 fishingSpotCell = new(0, 0, 0);
-
     public int fishStock = 2;
 
     private int fishStockRespawnInterval = 24000;
 
     private int fishStockRespawnTick;
+    public IntVec3 fishingSpotCell = new(0, 0, 0);
 
     private int maxFishStock = 3;
 

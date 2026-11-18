@@ -1,53 +1,48 @@
-# GitHub Copilot Instruction File for [RF] Fishing-ReWork (Continued)
-
+# GitHub Copilot Instructions for [RF] Fishing-ReWork (Continued)
 ## Mod Overview and Purpose
-
-The [RF] Fishing-ReWork (Continued) mod is a comprehensive rework of the original Rainbeau's fishing mod for RimWorld, updated by Si-Cafes and further modified by Mlie. This mod aims to enhance the fishing experience in RimWorld by introducing new mechanics, fixing existing issues, and improving textures while retaining the core essence of the original fishing mod.
-
+[RF] Fishing-ReWork (Continued) is an update of the Si-Cafes mod that reworks the fishing system in the RimWorld game. The mod adds new fish, fixes several issues from the original mod, and updates the fishing textures. The mod is compatible with other fishing mods, but not with the original fishing mod.
 ## Key Features and Systems
-
-- **Fishing as a Work Type**: Fishing operates as a custom work type primarily dependent on the "Animals" skill. Pawns with higher skill levels will fish more efficiently and have a greater likelihood of successful catches, which can also serve as a joy activity for pawns passionate about Animals.
-  
-- **Variety of Catchable Items**: Biome-dependent fish species and other aquatic creatures like eels and squids can be caught, with specific conditions like marsh vs. ocean tiles influencing the catch. Shellfish traps function autonomously to catch shellfish or small fish.
-  
-- **Ice Fishing**: Special ice fishing spots are added for use on frozen waters in conjunction with mods like "Permafrost", enhancing gameplay in cold biomes.
-  
-- **New Textures and Items**: Complete overhaul of textures for fish, fishing spots, and fishing tools, alongside the introduction of new fish and shellfish species.
-  
-- **Integration and Compatibility**: Works alongside other modded biomes and cooking mods, with special patches to use seafood as a substitute for raw meat across various mods.
-
-- **Caravan and Trading Enhancements**: Introduction of fishmongers in caravans to ensure accessibility on maps without natural water sources, with fish carcasses and meat available through traders.
-
+The mod adds the following key features and systems:
+- Ice fishing spots that work on frozen river or lake water tiles
+- Shellfish traps that automatically catch shellfish or tiny fish
+- Tiny fish that can be grilled at the campfire
+- Seafood separated from the raw meat category
+- Fishmongers that sell corpses of fish and fish meat
+- Compatibility with several other mods, including Vanilla Cooking Expanded and Vanilla Gourmet Parade
 ## Coding Patterns and Conventions
-
-- **Object-Oriented Design**: The mod utilizes classes like `Building_FishingSpot`, `Building_ShellfishTrap`, and `Controller` to encapsulate functionality related to different components of the mod.
-  
-- **Modular and Extensible Code**: The use of abstract classes and methods, such as `PlaceWorker` and `WorkGiver_Scanner` derivatives, allows easy expansion and integration with other mod features.
-
-- **Consistency in Naming**: Classes and methods follow a consistent naming convention, reflecting their purpose and relationship to the fishing system.
-
+The mod follows the standard RimWorld coding conventions for C# and XML. Key coding patterns include:
+- Using the Harmony patching framework for modding
+- Defining new game objects and behaviors using XML and C#
+- Using the RimWorld API to interact with the game world
 ## XML Integration
-
-- **Defs File Rework**: The Defs file has been rewritten to fix issues, including patching for compatibility with various mods and ensuring new fish and items are properly defined for spawning and processing.
-
-- **Separation of Seafood**: Unique categorization and handling of seafood distinct from regular raw meat, reflecting gameplay changes in trading and processing.
-
+The mod uses XML to define new game objects and behaviors. The key XML files include:
+- ThingDefsBuildings.xml: Defines new buildings and items, such as fishing spots, shellfish traps, and fishmongers.
+- About.xml: Contains information about the mod, such as the author and description.
+- TranslationTemplate.xml: Contains templates for translation files, which can be used to localize the mod for different languages.
 ## Harmony Patching
-
-- **Patch Applications**: Harmony patches are used to modify base game behavior for new mod features and to ensure compatibility with other mods, such as applying patches to allow seafood to substitute for raw meat in existing meal recipes.
-
-- **Non-Intrusive Modifications**: Patches avoid directly altering core game files, allowing the mod to work seamlessly with other modifications and reducing the likelihood of conflicts.
-
+The mod uses the Harmony patching framework to modify the game code. Key Harmony patches include:
+- Modifying the fishing mechanic to use the "Animals" skill instead of the "Crafting" skill
+- Adding new fish to the game
+- Modifying the behavior of existing fish
 ## Suggestions for Copilot
+When using Copilot to assist with [RF] Fishing-ReWork (Continued), consider the following:
+- Use Copilot to generate code snippets for new game objects and behaviors defined in XML.
+- Use Copilot to generate Harmony patches for modifying existing game code.
+- Use Copilot to generate C# code for new behaviors and interactions.
+- Use Copilot to generate translations for the mod in different languages.
 
-- **Autocomplete for Repetitive Structures**: Use Copilot to assist in generating repetitive parts of the mod, such as XML configurations for new fish types or item definitions.
+## Project Solution Guidelines
+- Relevant mod XML files are included as Solution Items under the solution folder named XML, these can be read and modified from within the solution.
+- Use these in-solution XML files as the primary files for reference and modification.
+- The `.github/copilot-instructions.md` file is included in the solution under the `.github` solution folder, so it should be read/modified from within the solution instead of using paths outside the solution. Update this file once only, as it and the parent-path solution reference point to the same file in this workspace.
+- When making functional changes in this mod, ensure the documented features stay in sync with implementation; use the in-solution `.github` copy as the primary file.
+- In the solution is also a project called Assembly-CSharp, containing a read-only version of the decompiled game source, for reference and debugging purposes.
+- For any new documentation, update this copilot-instructions.md file rather than creating separate documentation files.
 
-- **Refactoring and Optimization**: Leverage Copilot for code optimization suggestions, especially in areas like job drivers (`JobDriver_CatchFish`) to enhance performance.
 
-- **Harmony Optimization**: Get recommendations on effective Harmony patch patterns to ensure mod compatibility and minimize errors.
+## Hard rules (must follow)
+- Do NOT run commands that modify the repo (no git commit, git apply, dotnet format) unless explicitly asked.
+- Prefer minimal reads: read only the smallest code region needed (around the suspicious lines).
+- When mentioning SonarQube issues, automatically use the SonarQube MCP service to fetch and address issues instead of making inferred fixes without querying SonarQube first.
+- When mentioning the rimworld log, automatically use the Rimworld MCP service to fetch the log.
 
-- **Documentation and Comments**: Encourage comprehensive documentation and inline comments for clarity and maintainability, ensuring future developers can easily understand and extend the mod.
-
-- **Multi-Language Support**: Facilitate the addition of translations by suggesting structured approaches and best practices, enhancing the mod's accessibility for a global audience.
-
-By following these guidelines and suggestions, developers can leverage GitHub Copilot to maintain and enhance the [RF] Fishing-ReWork mod, providing an engaging and seamless experience for RimWorld players.
